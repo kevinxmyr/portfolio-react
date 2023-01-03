@@ -1,36 +1,43 @@
 import React from "react";
 import Button from "../ui/Button";
-import image from '../assets/me.jpg'
+import image from "../assets/me.jpg";
+import { ParallaxHover } from "react-parallax-hover";
 
 export default function AboutMe(props) {
   const about = "aboutme";
 
   return (
-    <div className='background-ko text-center h-screen
+    <div
+      className='background-ko text-center h-screen
     flex flex-col items-center justify-center gap-5'>
-
-      <div>
-         <h1 className='uppercase text-white font-bold
-         text-[1.7rem]'>about me</h1>
+      <div className='mb-6'>
+        <h1
+          className='uppercase text-white font-bold
+         text-[1.7rem]'>
+          about me
+        </h1>
       </div>
 
-      <div>
-        <img className="h-[18rem]" src={image} alt='profile-pic' />
+      <div className='mb-10 shadow-ko'>
+        <ParallaxHover width={250} height={250} scale={3} borderRadius={2} shadow={2.5} rotation={2.5}>
+          <img className='' src={image} alt='profile-pic' />
+        </ParallaxHover>
       </div>
 
-      <div>
-        <p className="text-white">
-          Hi! my name is Kevin, I am an Information Technology graduate, an
-          aspiring Web Developer. Currently taking up online course to expand my
+      <div className='p-5'>
+        <p className='text-white'>
+          I'm an Information Technology graduate, a self-taught
+          aspiring React Web Developer. Currently taking up online courses to expand my
           knowledge in Web Development.
         </p>
-        <p className="text-[.8rem] mt-5 text-white">I ♥️ Music, Coffee & Technology.</p>
+        <p className='text-[.8rem] mt-5 text-white'>
+          I ♥️ Music, Coffee & Technology.
+        </p>
       </div>
 
-      <div className="mt-5">
+      <div className=''>
         <Button about={about}>View Resume</Button>
       </div>
-
     </div>
   );
 }
