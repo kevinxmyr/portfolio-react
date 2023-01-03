@@ -1,0 +1,14 @@
+.button-knowmore-green{
+   border: 2.3px solid var(--berde);
+   color: var(--berde);
+   padding: 4px 1rem 4px 1rem;
+   font-weight: bold;
+   font-size: 1.2rem;
+ }
+ .button-white {
+   border: 2.3px solid var(--puti);
+   color: var(--puti);
+   padding: 4px 1rem 4px 1rem;
+   font-weight: bold;
+   font-size: 1rem;
+ }
