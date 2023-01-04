@@ -20,6 +20,10 @@
   color: var(--puti);
   background-size: 100% 100%;
 }
+/* .button-knowmore-green:hover:after{
+   content: '>';
+} */
+
 
 .button-white {
   border: 2.3px solid var(--puti);

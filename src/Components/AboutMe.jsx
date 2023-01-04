@@ -19,15 +19,21 @@ export default function AboutMe(props) {
       </div>
 
       <div className='mb-10 shadow-ko'>
-        <ParallaxHover width={250} height={250} scale={3} borderRadius={2} shadow={2.5} rotation={2.5}>
+        <ParallaxHover
+          width={250}
+          height={250}
+          scale={3}
+          borderRadius={2}
+          shadow={2.5}
+          rotation={2.5}>
           <img className='' src={image} alt='profile-pic' />
         </ParallaxHover>
       </div>
 
       <div className='p-5'>
         <p className='text-white'>
-          I'm an Information Technology graduate, a self-taught
-          aspiring React Web Developer. Currently taking up online courses to expand my
+          I'm an Information Technology graduate, an aspiring self-taught React
+          Web Developer. Currently taking up online courses to expand my
           knowledge in Web Development.
         </p>
         <p className='text-[.8rem] mt-5 text-white'>

@@ -8,8 +8,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mont: ['"Montserrat"', ...defaultTheme.fontFamily.sans]
-      }
+        mont: ['"Montserrat"', ...defaultTheme.fontFamily.sans],
+        space: ['"Space Mono"', ...defaultTheme.fontFamily.sans]
+      },
+      
     },
   },
   plugins: [],
