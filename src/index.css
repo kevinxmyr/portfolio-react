@@ -10,11 +10,27 @@
   --textgray: #757575;
 }
 
+/* GLOBALS */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: #272341;
+}
+.section-title-green {
+  text-transform: uppercase;
+  color: var(--puti);
+  font-weight: 700;
+  font-size: 1.7rem;
+  text-shadow: 0px 3px 12px rgba(0,0,0,0.20);
+}
+.section-title-white {
+  text-transform: uppercase;
+  color: #342f51;
+  font-weight: 700;
+  font-size: 1.7rem;
+  text-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
 }
 /* HOME */
 .kevin-span {
@@ -52,13 +68,25 @@
 .arrow {
   position: relative;
   top: -10%;
-  opacity: .7;
-  transition: top .25s ease;
+  opacity: 0.7;
+  transition: top 0.25s ease;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 300ms ease;
 }
 .arrow:hover {
-  top: -12%;
+  top: -11%;
+  opacity: 1;
 }
-
+.socials {
+  position: relative;
+  transition: all 250ms ease;
+  /* outline: 1px solid red; */
+  top: 0;
+  cursor: alias;
+}
+.socials:hover {
+  position: relative;
+  top: -10%;
+}

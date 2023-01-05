@@ -9,6 +9,7 @@ import AboutMe from "./Components/AboutMe";
 import Footer from "./Components/Footer";
 import Home from "./Components/Home";
 import NavBar from "./Components/NavBar";
+import Stacks from './Components/Stacks'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
 
           <Route path='/aboutme'>
             <AboutMe />
+            <Stacks />
           </Route>
         </Switch>
         <Redirect to='/' />

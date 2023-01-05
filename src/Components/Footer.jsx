@@ -13,27 +13,26 @@ export default function Footer() {
 
   return (
     <div className='bg-[var(--gray)] text-white flex justify-center items-center flex-col gap-4
-    h-[20rem]'>
+    h-[18rem]'>
 
-      <div className="arrow" onClick={scrollToTop}>
+      <div className="arrow cursor-pointer" onClick={scrollToTop}>
         <FaChevronDown size={20} fill='white' style={{transform: 'rotate(180deg)'}}/>
       </div>
 
 
       <div className='text-white mb-5'>
-         <ul className='flex gap-10'>
-            <li><ImGithub fill='#fafafa' size={30}/></li>
-            <li><ImLinkedin2 fill='#fafafa' size={30}/></li>
-            <li><SiFacebook fill='#fafafa' size={30}/></li>
+         <ul className='flex gap-11'>
+            <li onClick={() => window.open('https://www.github.com/kevinxmyr')} className='socials'><ImGithub fill='#fafafa' size={30}/></li>
+            <li onClick={() => window.open('https://ph.linkedin.com/in/kev-punongbayan')} className='socials'><ImLinkedin2 fill='#fafafa' size={30}/></li>
+            <li onClick={() => window.open('https://www.fb.com/')} className='socials'><SiFacebook fill='#fafafa' size={30}/></li>
          </ul>
       </div>
-
-      <div className=' w-3/5'>
+      <div className=' w-[48%]'>
          <hr className='hr--style'/>
       </div>
 
       <div>
-         <small className='text--color'>© 2023 – <span className='text--color hover:text-[var(--berde)]'>Kevin Punongbayan</span></small>
+         <small className='text--color cursor-default'>© 2023 – <span className='text--color hover:text-[var(--berde)]'>Kevin Punongbayan</span></small>
       </div>
 
     </div>

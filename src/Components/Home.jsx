@@ -3,13 +3,10 @@ import { Link, Redirect, useHistory } from "react-router-dom";
 import Button from "../ui/Button";
 import { FiArrowRight } from "react-icons/fi";
 
-
 const Home = () => {
   const bahay = "home";
   const history = useHistory();
   const [state, setState] = useState(false);
-
-
 
   return (
     <div
@@ -32,7 +29,8 @@ const Home = () => {
           0% {
             left: -100px;
             opacity: 0;
-          } 100% {
+          }
+          100% {
             left: 0px;
             opacity: 1;
           }
@@ -56,7 +54,8 @@ const Home = () => {
             transform: translate(0px, 0px);
             opacity: 1;
           }
-        } 
+        }
+       
       `}</style>
 
       <div className='text-[2.3rem] text-center mb-5'>
@@ -73,7 +72,14 @@ const Home = () => {
           onMouseLeave={() => setState(false)}
           className='reveal opacity-0'>
           <Button bahay={bahay}>
-            Learn More{state && <FiArrowRight stroke="white" strokeWidth={3.5} className='w-max h-[1.2rem] galaw animate-bounce'/>}
+            Learn More
+            {state && (
+              <FiArrowRight
+                stroke='white'
+                strokeWidth={3.5}
+                className='w-max h-[1.2rem] galaw animate-bounce'
+              />
+            )}
           </Button>
         </div>
       </Link>
@@ -81,6 +87,5 @@ const Home = () => {
     </div>
   );
 };
-
 
 export default Home;

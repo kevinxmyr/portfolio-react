@@ -12,8 +12,7 @@ export default function AboutMe(props) {
     flex flex-col items-center justify-center gap-5'>
       <div className='mb-6'>
         <h1
-          className='uppercase text-white font-bold
-         text-[1.7rem]'>
+          className='section-title-green'>
           about me
         </h1>
       </div>
