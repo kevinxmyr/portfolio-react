@@ -3,9 +3,11 @@ import { AiFillHtml5 } from "react-icons/ai";
 import { DiCss3 } from "react-icons/di";
 import { SiJavascript, SiTailwindcss, SiReact } from "react-icons/si";
 import { FaGit } from "react-icons/fa";
+import { useHistory } from "react-router-dom";
 
 export default function Stacks() {
   const stacks = "stacks";
+  const history = useHistory();
 
   return (
     <div className="bg-[var(--puti)] flex items-center flex-col p-10 z-10">
@@ -100,6 +102,8 @@ export default function Stacks() {
           <p className="mt-3">ReactJs</p>
         </div>
       </div>
+      
+      <p onClick={() => history.push('/')}>BACK TO HOMEPAGE</p>
     </div>
   );
 }
