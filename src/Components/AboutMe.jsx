@@ -28,7 +28,7 @@ export default function AboutMe(props) {
 
       <div className='p-6'>
         <p className='text-white'>
-          I'm an Information Technology graduate, an aspiring self-taught React
+          aI'm an Information Technology graduate, an aspiring self-taught React
           Web Developer. Currently taking up online courses to expand my
           knowledge in Web Development.
         </p>
