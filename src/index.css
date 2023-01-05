@@ -84,9 +84,21 @@
   transition: all 250ms ease;
   /* outline: 1px solid red; */
   top: 0;
-  cursor: alias;
+  cursor: pointer;
 }
 .socials:hover {
   position: relative;
   top: -10%;
+}
+.linkedin, .github, .facebook {
+ transition: fill 200ms ease; 
+}
+.linkedin:hover {
+  fill: #0071AC;
+}
+.github:hover {
+  fill: grey;
+}
+.facebook:hover {
+  fill: #1771E6 ;
 }

@@ -5,6 +5,7 @@ import { ParallaxHover } from "react-parallax-hover";
 
 export default function AboutMe(props) {
   const about = "aboutme";
+ 
 
   return (
     <div
@@ -28,7 +29,7 @@ export default function AboutMe(props) {
 
       <div className='p-6'>
         <p className='text-white'>
-          aI'm an Information Technology graduate, an aspiring self-taught React
+          I'm an Information Technology graduate, an aspiring self-taught React
           Web Developer. Currently taking up online courses to expand my
           knowledge in Web Development.
         </p>

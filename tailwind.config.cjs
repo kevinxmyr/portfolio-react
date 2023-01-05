@@ -11,7 +11,11 @@ module.exports = {
         mont: ['"Montserrat"', ...defaultTheme.fontFamily.sans],
         space: ['"Space Mono"', ...defaultTheme.fontFamily.sans]
       },
-      
+      animation: {
+        'spin-slow': 'spin 25s linear infinite',
+        'spin-fast': 'spin 5s ease-out infinite',
+        'bounce-slow': 'bounce 2.5s ease-out infinite'
+      }
     },
   },
   plugins: [],

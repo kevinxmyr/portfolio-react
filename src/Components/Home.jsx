@@ -12,7 +12,7 @@ const Home = () => {
     <div
       className='w-full h-screen flex flex-col justify-center items-center p-5
     font-bold font-mont'>
-      <style jsx>{`
+      <style>{`
         .animationkuno {
           animation: slide 1.5s cubic-bezier(0, 1, 0.86, 0.95) 500ms forwards;
         }
