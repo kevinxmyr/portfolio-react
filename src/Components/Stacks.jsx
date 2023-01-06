@@ -4,6 +4,7 @@ import { DiCss3 } from "react-icons/di";
 import { SiJavascript, SiTailwindcss, SiReact } from "react-icons/si";
 import { FaGit } from "react-icons/fa";
 import { useHistory } from "react-router-dom";
+import { techstacks } from "../data/techstacks";
 
 export default function Stacks() {
   const stacks = "stacks";
@@ -98,12 +99,31 @@ export default function Stacks() {
           <p className="mt-3">Git</p>
         </div>
         <div className="ring- pang-flex">
-          <SiReact className="animate-spin-slow hover:animate-spin-fast" size={50} />
+          <SiReact
+            className="animate-spin-slow hover:animate-spin-fast"
+            size={50}
+          />
           <p className="mt-3">ReactJs</p>
         </div>
       </div>
       
-      <p onClick={() => history.push('/')}>BACK TO HOMEPAGE</p>
+      {/* from obj  */}
+      <div className="ring-2 mt-10 flex">
+        {techstacks.map((item) => {
+          const { techname, Icon } = item;
+
+          return (
+            
+              <div className="basis-2 ring-2 flex flex-col items-center gap-2 p-1" key={techname}>
+                <Icon size={50}/>
+                <p>{techname}</p>
+              </div>
+          );
+        })}
+      </div>
+      
+      
+      <p className="mt-10" onClick={() => history.push("/")}>BACK TO HOMEPAGE</p>
     </div>
   );
 }
