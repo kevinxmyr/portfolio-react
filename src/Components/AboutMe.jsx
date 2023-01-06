@@ -3,13 +3,17 @@ import Button from "../ui/Button";
 import image from "../assets/me.jpg";
 import { ParallaxHover } from "react-parallax-hover";
 
+
 export default function AboutMe(props) {
   const about = "aboutme";
+
+ 
 
   return (
     <div
       className='background-ko text-center h-screen
     flex flex-col items-center justify-center gap-5'>
+    
       <div className='mb-6'>
         <h1 className='section-title-green'>about me</h1>
       </div>
