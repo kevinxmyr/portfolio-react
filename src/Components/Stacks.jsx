@@ -6,7 +6,6 @@ import { FaGit } from "react-icons/fa";
 import { useHistory } from "react-router-dom";
 import { techstacks } from "../data/techstacks";
 
-// new comment
 
 export default function Stacks() {
   const stacks = "stacks";
@@ -70,7 +69,8 @@ export default function Stacks() {
           Technolgy i use
         </h1>
       </div>
-
+      
+      {/* FLEX STYLE */}
       {/*<div className='flex flex-wrap gap-10 p-10'>
          <div className='ring-1 m-auto pang-flex'><AiFillHtml5 size={100}/>HTML 5</div>
          <div className='ring-1 m-auto pang-flex'> <DiCss3 size={100}/> CSS 3 </div>
@@ -110,7 +110,7 @@ export default function Stacks() {
       </div>
       
       {/* from obj  */}
-      <div className="ring-2 mt-10 flex">
+      {/* <div className="ring-2 mt-10 flex">
         {techstacks.map((item) => {
           const { techname, Icon } = item;
 
@@ -122,10 +122,10 @@ export default function Stacks() {
               </div>
           );
         })}
-      </div>
+      </div> */}
       
       
-      <p className="mt-10" onClick={() => history.push("/")}>BACK TO HOMEPAGE</p>
+      {/* <p className="mt-10" onClick={() => history.push("/")}>BACK TO HOMEPAGE</p> */}
     </div>
   );
 }

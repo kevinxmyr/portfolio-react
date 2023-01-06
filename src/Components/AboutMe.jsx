@@ -7,8 +7,6 @@ import { ParallaxHover } from "react-parallax-hover";
 export default function AboutMe(props) {
   const about = "aboutme";
 
- 
-
   return (
     <div
       className='background-ko text-center h-screen

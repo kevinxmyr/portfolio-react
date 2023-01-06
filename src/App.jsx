@@ -11,6 +11,7 @@ import Home from "./Components/Home";
 import NavBar from "./Components/NavBar";
 import ScrollToTopAlways from "./Components/ScrollToTopAlways";
 import Stacks from './Components/Stacks'
+import Projects from "./Components/Projects";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path='/aboutme'>
             <AboutMe />
             <Stacks />
+            <Projects />
           </Route>
         </Switch>
         <Redirect to='/' />

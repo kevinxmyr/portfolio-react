@@ -36,6 +36,10 @@
 .kevin-span {
   font-weight: 700;
   color: #00cdac;
+  font-size: 2.6rem;
+  background: linear-gradient(114deg, rgb(37, 197, 170) 0%, rgba(0,226,189,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* ABOUT ME */

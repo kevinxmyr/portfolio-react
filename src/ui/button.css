@@ -4,21 +4,25 @@
   padding: 4px 1rem 4px 1rem;
   font-weight: bold;
   font-size: 1.2rem;
-  background: linear-gradient(var(--berde), var(--berde));
+  background: linear-gradient(114deg, rgba(0,205,172,1) 0%, rgba(0,240,201,1) 100%);
   background-position-x: left;
   background-repeat: no-repeat;
   background-size: 0% 100%;
-  transition: background-size 150ms cubic-bezier(0, 0.94, 0.42, 0.995), color .300s ease;
+  transition: all 150ms cubic-bezier(0, 0.94, 0.42, 0.995), color .300s ease;
 }
 
 .button-knowmore-green:hover {
-  border: 2.3px solid var(--berde);
+  /* border: 2.3px solid var(--berde); */
   color: var(--berde);
   padding: 4px 1rem 4px 1rem;
   font-weight: bold;
   font-size: 1.2rem;
   color: var(--puti);
   background-size: 100% 100%;
+  border-width: 2.3px;
+  border-image: linear-gradient(114deg, rgba(1,213,179,.9) 0%, rgba(0,240,201,1) 100%) 1;
+  border-style: solid;
+  
 }
 /* .button-knowmore-green:hover:after{
    content: '>';
