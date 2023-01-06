@@ -6,6 +6,8 @@ import { FaGit } from "react-icons/fa";
 import { useHistory } from "react-router-dom";
 import { techstacks } from "../data/techstacks";
 
+// THIS IS FROM NEW FEATURE BRANCH ITONG LINE LANG NA TO -->>
+
 export default function Stacks() {
   const stacks = "stacks";
   const history = useHistory();
