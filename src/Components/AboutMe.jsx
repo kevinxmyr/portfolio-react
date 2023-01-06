@@ -12,11 +12,32 @@ export default function AboutMe(props) {
       className='background-ko text-center h-screen
     flex flex-col items-center justify-center gap-5'>
     
-      <div className='mb-6'>
+    <style>{`
+      .slide {
+        position: relative;
+        animation: slideup 1s ease forwards;
+      }
+      
+      @keyframes slideup {
+        from {
+          bottom: -1rem;
+          opacity: 0;
+        }
+        to {
+          bottom: 0;
+          opacity: 1;
+        }
+      }
+      .slide-image {
+        animation: 2s ease-in 1.5s infinite slideup;
+      }
+    `}</style>
+    
+      <div className='mb-6 slide'>
         <h1 className='section-title-green'>about me</h1>
       </div>
 
-      <div className='mb-5 shadow-ko'>
+      <div className='mb-5 shadow-ko slide-image'>
         <ParallaxHover
           width={250}
           height={250}
@@ -28,7 +49,7 @@ export default function AboutMe(props) {
         </ParallaxHover>
       </div>
 
-      <div className='p-6'>
+      <div className='p-6 slide'>
         <p className='text-white'>
           I'm an Information Technology graduate, an aspiring self-taught React
           Web Developer. Currently taking up online courses to expand my
@@ -39,9 +60,10 @@ export default function AboutMe(props) {
         </p>
       </div>
 
-      <div className=''>
+      <div className='slide'>
         <Button about={about}>View Resume</Button>
       </div>
     </div>
   );
 }
+    
