@@ -6,6 +6,7 @@ import { FaGit } from "react-icons/fa";
 import { useHistory } from "react-router-dom";
 import { techstacks } from "../data/techstacks";
 
+// new comment
 
 export default function Stacks() {
   const stacks = "stacks";
