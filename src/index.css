@@ -5,7 +5,7 @@
 :root {
   --berde: #00cdac;
   --itim: #1d1d1d;
-  --puti: #fdfdfd;
+  --puti: #fefefe;
   --gray: #333333;
   --textgray: #757575;
 }
@@ -16,7 +16,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #272341;
+  /* color: #272341; */
 }
 .section-title-green {
   text-transform: uppercase;
@@ -32,6 +32,7 @@
   font-size: 1.7rem;
   text-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
 }
+
 /* HOME */
 .kevin-span {
   font-weight: 700;

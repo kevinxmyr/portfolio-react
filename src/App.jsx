@@ -8,7 +8,6 @@ import {
 import AboutMe from "./Components/AboutMe";
 import Footer from "./Components/Footer";
 import Home from "./Components/Home";
-import NavBar from "./Components/NavBar";
 import ScrollToTopAlways from "./Components/ScrollToTopAlways";
 import Stacks from './Components/Stacks'
 import Projects from "./Components/Projects";
@@ -17,7 +16,7 @@ function App() {
   return (
     <div className="font-mont">
       <Router>
-      <ScrollToTopAlways />
+      {/* <ScrollToTopAlways /> */}
         <Switch>
           <Route exact path='/'>
             <Home />
@@ -29,7 +28,7 @@ function App() {
             <Projects />
           </Route>
         </Switch>
-        <Redirect to='/' />
+        {/* <Redirect to='/' /> */}
         <Footer />
       </Router>
     </div>
