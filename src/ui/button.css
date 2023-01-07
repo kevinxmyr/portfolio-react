@@ -4,6 +4,7 @@
   padding: 4px 1rem 4px 1rem;
   font-weight: bold;
   font-size: 1.2rem;
+  
   background: linear-gradient(114deg, rgba(0,205,172,1) 0%, rgba(0,240,201,1) 100%);
   background-position-x: left;
   background-repeat: no-repeat;
@@ -12,27 +13,30 @@
 }
 
 .button-knowmore-green:hover {
-  /* border: 2.3px solid var(--berde); */
-  color: var(--berde);
   padding: 4px 1rem 4px 1rem;
   font-weight: bold;
   font-size: 1.2rem;
   color: var(--puti);
-  background-size: 100% 100%;
   border-width: 2.3px;
   border-image: linear-gradient(114deg, rgba(1,213,179,.9) 0%, rgba(0,240,201,1) 100%) 1;
   border-style: solid;
   
+  background-size: 100% 100%;
 }
-/* .button-knowmore-green:hover:after{
-   content: '>';
-} */
-
-
 .button-white {
-  border: 2.3px solid var(--puti);
-  color: var(--puti);
-  padding: 4px 1rem 4px 1rem;
+  border: 2.3px solid white;
+  padding: 4px 1rem;
   font-weight: bold;
-  font-size: 1rem;
+  color: white;
+  
+  transition: all 250ms ease;
+  
+  background: linear-gradient(114deg, rgb(255, 255, 255) 0%, rgb(247, 252, 252) 100%);
+  background-position-x: left;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+}
+.button-white:hover {
+  color: var(--berde);
+  background-size: 100% 100%;
 }
