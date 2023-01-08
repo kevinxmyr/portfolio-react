@@ -1,7 +1,7 @@
 import React from "react";
 import "./button.css";
 
-export default function Button({ children, bahay, about, projects }) {
+export default function Button({ children, bahay, about, projects, contact }) {
 
 console.log(projects);
   return (
@@ -14,6 +14,8 @@ console.log(projects);
             ? "button-white"
             : projects === 'projects'
             ? "button-white"
+            : contact === 'contact'
+            ? 'button-knowmore-green'
             : null
         }
       >

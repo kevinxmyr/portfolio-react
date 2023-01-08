@@ -33,10 +33,8 @@ export default function Projects() {
 
       {/* ----------------------FROM OBJECT------------------ */}
       {projects.map((data) => {
-        const { projectTitle, description, image } = data;
-        const style = {
-          color: 'white',
-        };
+        const { projectTitle, description, image, projUrl } = data;
+
         return (
           <div
             className="text-white flex flex-col gap-6"
@@ -52,20 +50,24 @@ export default function Projects() {
             </div>
 
             <div className="uppercase">
-              <Button projects={proyekto}>See Live</Button>
+              <a href={projUrl}>
+                <Button projects={proyekto}>See Live</Button>
+              </a>
             </div>
 
             {/* image */}
-            <div className=''>
+            <div className="">
               <ParallaxHover
                 width={350}
                 scale={3}
                 borderRadius={2}
                 shadow={2.5}
                 rotation={2.5}>
-                <img className='w-full h-full object-cover'
+                <img
+                  className="w-full h-full object-cover"
                   src={image}
-                  alt="proj-image"/>
+                  alt="proj-image"
+                />
               </ParallaxHover>
             </div>
           </div>
