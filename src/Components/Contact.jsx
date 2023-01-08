@@ -11,9 +11,9 @@ export default function Contact() {
         <h1 className="section-title-white">CONTACT</h1>
       </div>
 
-      <div className="mb-5">
-        <p className="text-center">
-          By clicking the button below you agree on terms & conditions.
+      <div className="mt-5">
+        <p className="font-bold text-[var(--itim2)] text-center">
+          Contact me!
         </p>
       </div>
 
@@ -21,7 +21,7 @@ export default function Contact() {
         <a
           href={mailchimp}
           target="_blank">
-          <Button contact={contact}>Contact Me!</Button>
+          <Button contact={contact}>Send E-mail</Button>
         </a>
       </div>
     </div>

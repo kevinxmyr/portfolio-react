@@ -1,7 +1,7 @@
 import facebot from '../assets/projects-assets/facebot.png'
 import bggenerator from '../assets/projects-assets/bggenerator.png'
 import fluffimage from '../assets/projects-assets/fluff.png'
-
+import moviedb from '../assets/projects-assets/moviedb.png'
 export const projects = [
    {
       projectTitle: 'FaceBot',
@@ -17,9 +17,15 @@ export const projects = [
    },
    {
       projectTitle: 'Fluff Koppi Cafe',
-      description: 'FLUFF KOPPI CAFE A COLLABORATIVE WORK OF @KEVEENO AND @CL4RK_tiktok',
+      description: 'Cafe single page website.',
       image: fluffimage,
       projUrl: 'https://kapehan.vercel.app/'
    },
+   {
+      projectTitle: 'The Movie DB',
+      description: 'Movie and Series database fetching datas from The Movie Database API.',
+      image: moviedb,
+      projUrl: 'http://react-movie-search-seven.vercel.app/'
+   }
    
 ]

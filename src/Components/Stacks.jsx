@@ -5,6 +5,7 @@ import { SiJavascript, SiTailwindcss, SiReact } from "react-icons/si";
 import { FaGit } from "react-icons/fa";
 import { useHistory } from "react-router-dom";
 import { techstacks } from "../data/techstacks";
+import vscode from '../assets/vscode.png'
 
 
 export default function Stacks() {
@@ -32,7 +33,7 @@ export default function Stacks() {
          bottom: 40px;
          background-color: #f7df1e;
          z-index: -1;
-         opacity: .7;
+         opacity: 1;
         }
         .css{
          position: relative;
@@ -103,9 +104,12 @@ export default function Stacks() {
         <div className="ring- pang-flex">
           <SiReact
             className="animate-spin-slow hover:animate-spin-fast"
-            size={50}
-          />
+            size={50}/>
           <p className="mt-3">ReactJs</p>
+        </div>
+        <div className=" m-[0_auto] col-span-2 flex flex-col">
+          <img className="w-[3rem] mb-3 self-center" src={vscode} alt="vscode" />
+          <p className="">Visual Studio Code</p>
         </div>
       </div>
       

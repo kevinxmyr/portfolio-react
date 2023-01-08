@@ -15,6 +15,9 @@ module.exports = {
         'spin-slow': 'spin 25s linear infinite',
         'spin-fast': 'spin 5s ease-out infinite',
         'bounce-slow': 'bounce 2.5s ease-out infinite'
+      },
+      colors: {
+        // PWEDE DIN DITO YUNG SA GLOBAL SA INDEX.CSS
       }
     },
   },

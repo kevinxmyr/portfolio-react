@@ -37,10 +37,10 @@ export default function Projects() {
 
         return (
           <div
-            className="text-white flex flex-col gap-6"
+            className="text-white flex flex-col gap-5"
             key={projectTitle}>
             {/* title */}
-            <div className="">
+            <div className="ring-red-500">
               <h1 className="font-bold text-[1.3rem]">{projectTitle}</h1>
             </div>
 

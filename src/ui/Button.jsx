@@ -2,8 +2,6 @@ import React from "react";
 import "./button.css";
 
 export default function Button({ children, bahay, about, projects, contact }) {
-
-console.log(projects);
   return (
     <div className="font-mont">
       <button

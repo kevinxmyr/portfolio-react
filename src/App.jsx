@@ -25,7 +25,7 @@ function App() {
           </Route>
 
           <Route path='/aboutme'>
-            <Count />
+            {/* <Count /> */}
             <AboutMe />
             <Stacks />
             <Projects />
