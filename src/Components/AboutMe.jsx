@@ -10,10 +10,19 @@ export default function AboutMe(props) {
     <div
       className="background-ko text-center h-screen
     flex flex-col items-center justify-center gap-5">
-      <style>{`
+      <style jsx>{`
       .slide {
         position: relative;
-        animation: slideup 1s ease forwards;
+        animation: slideup 1s ease both;
+      }
+      .slide-image {
+        animation-delay: 250ms;
+      }
+      .slide-paragraph {
+        animation-delay: 500ms;
+      }
+      .slide-button {
+        animation-delay: 750ms;
       }
       
       @keyframes slideup {
@@ -26,16 +35,13 @@ export default function AboutMe(props) {
           opacity: 1;
         }
       }
-      .slide-image {
-        animation: 2s ease-in 1.5s forwards slideup;
-      }
     `}</style>
 
       <div className="mb-6 slide">
         <h1 className="section-title-green">about me</h1>
       </div>
 
-      <div className="mb-5 shadow-ko slide-image">
+      <div className="mb-5 shadow-ko slide slide-image">
         <ParallaxHover
           width={250}
           height={250}
@@ -51,7 +57,7 @@ export default function AboutMe(props) {
         </ParallaxHover>
       </div>
 
-      <div className="p-6 slide">
+      <div className="p-6 slide slide-paragraph">
         <p className="text-white">
           I'm an Information Technology graduate, an aspiring self-taught React
           Web Developer. Currently taking up online courses to expand my
@@ -62,7 +68,7 @@ export default function AboutMe(props) {
         </p>
       </div>
 
-      <div className="slide">
+      <div className="slide slide-button">
         <Button about={about}>View Resume</Button>
       </div>
     </div>
