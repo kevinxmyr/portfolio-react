@@ -50,7 +50,7 @@ export default function Projects() {
             </div>
 
             <div className="uppercase">
-              <a href={projUrl}>
+              <a href={projUrl} target='_blank'>
                 <Button projects={proyekto}>See Live</Button>
               </a>
             </div>

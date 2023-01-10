@@ -9,23 +9,23 @@ import AboutMe from "./Components/AboutMe";
 import Footer from "./Components/Footer";
 import Home from "./Components/Home";
 import ScrollToTopAlways from "./Components/ScrollToTopAlways";
-import Stacks from './Components/Stacks'
+import Stacks from "./Components/Stacks";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
-import Count from "./Components/Count";
+import LogButtonClicks from "./Components/LogButtonClicks";
 
 function App() {
   return (
-    <div className="font-mont">
+    <div className='font-mont'>
       <Router>
-      <ScrollToTopAlways />
+        <ScrollToTopAlways />
         <Switch>
           <Route exact path='/'>
             <Home />
           </Route>
 
           <Route path='/aboutme'>
-            {/* <Count /> */}
+            <LogButtonClicks />
             <AboutMe />
             <Stacks />
             <Projects />

@@ -17,7 +17,7 @@ module.exports = {
         'bounce-slow': 'bounce 2.5s ease-out infinite'
       },
       colors: {
-        // PWEDE DIN DITO YUNG SA GLOBAL SA INDEX.CSS
+        // PWEDE DIN DITO YUNG NASA GLOBAL SA INDEX.CSS
       }
     },
   },
