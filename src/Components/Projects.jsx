@@ -33,7 +33,7 @@ export default function Projects() {
 
       {/* ----------------------FROM OBJECT------------------ */}
       {projects.map((data) => {
-        const { projectTitle, description, image, projUrl } = data;
+        const { projectTitle, description, image, projUrl, tech } = data;
 
         return (
           <div
@@ -48,9 +48,13 @@ export default function Projects() {
             <div>
               <p className="">{description}</p>
             </div>
+            {/* TECH */}
+            <div>
+              <code className='text-[.9rem] opacity-[.8]'><i>{tech}</i></code>
+            </div>
 
             <div className="uppercase">
-              <a href={projUrl}>
+              <a href={projUrl} target='_blank'>
                 <Button projects={proyekto}>See Live</Button>
               </a>
             </div>
