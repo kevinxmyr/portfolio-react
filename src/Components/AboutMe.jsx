@@ -9,10 +9,12 @@ export default function AboutMe(props) {
   
   return (
     <div
-      className='background-ko text-center h-screen
-    flex flex-col items-center justify-center gap-5'>
 
+      className="background-ko text-center h-screen
+    flex flex-col items-center justify-center gap-5">
+    
       <style>{`
+
       .slide {
         position: relative;
         animation: slideup 1s ease both;
