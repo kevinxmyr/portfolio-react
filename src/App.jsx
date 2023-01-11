@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -12,7 +12,7 @@ import ScrollToTopAlways from "./Components/ScrollToTopAlways";
 import Stacks from "./Components/Stacks";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
-import LogButtonClicks from "./Components/LogButtonClicks";
+import ContextComponent from "./Components/ContextComponent";
 
 function App() {
   return (
@@ -23,14 +23,17 @@ function App() {
           <Route exact path='/'>
             <Home />
           </Route>
-
           <Route path='/aboutme'>
-            <LogButtonClicks />
+            
+            <ContextComponent />
+
             <AboutMe />
             <Stacks />
             <Projects />
             <Contact />
+
           </Route>
+          
         </Switch>
         {/* <Redirect to='/' /> REMOVED TO PREVENT REFRESH FROM REDIRECTIING TO HOME PAGE */}
         <Footer />

@@ -3,7 +3,6 @@ import Button from "../ui/Button";
 import image from "../assets/me.jpg";
 import { ParallaxHover } from "react-parallax-hover";
 import pdf from "../data/sample.pdf#toolbar=0";
-import Style from "../ui/Style";
 
 export default function AboutMe(props) {
   const about = 'aboutme';
@@ -13,7 +12,7 @@ export default function AboutMe(props) {
       className='background-ko text-center h-screen
     flex flex-col items-center justify-center gap-5'>
 
-      <Style>{`
+      <style>{`
       .slide {
         position: relative;
         animation: slideup 1s ease both;
@@ -38,7 +37,7 @@ export default function AboutMe(props) {
           opacity: 1;
         }
       }
-    `}</Style>
+    `}</style>
 
       <div className='mb-6 slide'>
         <h1 className='section-title-green'>about me</h1>
