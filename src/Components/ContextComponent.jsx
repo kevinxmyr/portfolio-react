@@ -1,82 +1,48 @@
-import React from "react";
-import StoreContextProvider, { useStoreContext } from "./StoreContextProvider";
+import React from 'react';
+import { useBearStore } from './useBearStore';
 
-const Winner = () => {
-  const { teamA, teamB } = useStoreContext();
-  return (
-    <div className='ring-2 p-5'>
-      <h1>Winner</h1>
-      <h4>
-        {teamA === teamB ? (
-          <p className='font-bold text-[orange]'>DRAW</p>
-        ) : teamA > teamB ? (
-          <p className="text-[blue]">"Team A</p>
-        ) : (
-         <p className="text-[red]">"Team A</p>
-        )}
-      </h4>
-    </div>
-  );
-};
+function ContextComponent() {
+  const bears = useBearStore((state) => state.bears);
+  const increasePopulation = useBearStore((state) => {
+    state.increasePopulation;
+  });
 
-const Player = ({ label, score, onIncrease, onDecrease }) => {
-  <div className='bg-blue-500 ring-4'>
-    <h2>{label}</h2>
-    <h2>{score}</h2>
-    <div>
-      <button onClick={onIncrease}>+</button>
-      <button onClick={onDecrease}>-</button>
-    </div>
-  </div>;
-};
+  function bearCounter() {
+    const bears = useBearStore((state) => state.bears);
+    return <h1 className="font-bold mb-5">{bears} around here ...</h1>;
+  }
 
-const PlayerA = () => {
-  const { teamA, increaseTeamAScore, decreaseTeamAScore } = useStoreContext();
+  function Controls() {
+    const increasePopulation = useBearStore(
+      (state) => state.increasePopulation
+    );
+    return (
+      <button
+        className="bg-slate-100 py-2 px-4 border-2 border-blue-500"
+        onClick={increasePopulation}>
+        +
+      </button>
+    );
+  }
 
-  return (
-    <>
-      <Player
-        label={"Team A"}
-        score={teamA}
-        onIncrease={increaseTeamAScore}
-        onDecrease={decreaseTeamAScore}
-      />
-    </>
-  );
-};
-const PlayerB = () => {
-  const { teamB, increaseTeamBScore, decreaseTeamBScore } = useStoreContext();
+  function Remove() {
+    const removeAllBears = useBearStore((state) => state.removeAllBears);
+    return (
+      <button onClick={removeAllBears} className="bg-slate-100 py-2 px-4 border-2 border-blue-500">
+        -
+      </button>
+    );
+  }
 
   return (
-    <Player
-      label={"Team B"}
-      score={teamB}
-      onIncrease={increaseTeamBScore}
-      onDecrease={decreaseTeamBScore}
-    />
-  );
-};
-
-const Players = () => {
-  console.log("players");
-  return (
-    <div className='p-5 bg-slate-200'>
-      <h3>Players</h3>
+    <div className="flex flex-col items-center py-10">
+      {bearCounter()}
       <div>
-        <PlayerA />
-        <PlayerB />
+        {Controls()}
+        {Remove()}
       </div>
     </div>
   );
-};
-
-export default function ContextComponent() {
-  return (
-    <div className='flex flex-col items-center p-5 border-8  border-purple-500'>
-      <StoreContextProvider>
-        <Winner />
-        <Players />
-      </StoreContextProvider>
-    </div>
-  );
 }
+
+export default ContextComponent;
