@@ -10,6 +10,7 @@ export default function AboutMe(props) {
     <div
       className="background-ko text-center h-screen
     flex flex-col items-center justify-center gap-5">
+    
       <style jsx>{`
       .slide {
         position: relative;
