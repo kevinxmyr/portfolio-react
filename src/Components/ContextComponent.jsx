@@ -25,7 +25,7 @@ function ContextComponent() {
     );
   }
 
-  function Remove() {
+  function decreasePopulation() {
     const removeAllBears = useBearStore((state) => state.removeAllBears);
     return (
       <button onClick={removeAllBears} className="bg-slate-100 py-2 px-4 border-2 border-blue-500">
@@ -33,14 +33,23 @@ function ContextComponent() {
       </button>
     );
   }
+  
+  function Reset () {
+    const resetAllBears = useBearStore((state) => state.reset)
+    return (
+      <button className="bg-slate-100 py-2 px-4 border-2 border-blue-500" onClick={resetAllBears}>reset</button>
+    )
+  }
+  
 
   return (
     <div className="flex flex-col items-center py-10">
       {bearCounter()}
       <div>
+        {decreasePopulation()}
         {Controls()}
-        {Remove()}
       </div>
+        {Reset()}
     </div>
   );
 }

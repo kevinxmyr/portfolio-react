@@ -8,5 +8,6 @@ export const useBearStore = create((set) => ({
       bears: state.bears + 1,
     })),
 
-  removeAllBears: () => ({ bears: 0 }),
+  decreasePopulation: () => set((state) => ({bears: state.bears - 1})),
+  reset: () => set((state) => ({bears: state.bears = 0}))``
 }));
