@@ -20,7 +20,7 @@ export default function ContextComponent() {
     );
     return (
       <button
-        className="bg-slate-100 py-2 px-4"
+        className="bg-slate-100 py-2 px-4 border-2"
         onClick={increasePopulation}>
         +
       </button>
@@ -32,7 +32,7 @@ export default function ContextComponent() {
     return (
       <button
         onClick={removeAllBears}
-        className="bg-slate-100 py-2 px-4">
+        className="bg-slate-100 py-2 px-4 border-2">
         -
       </button>
     );
@@ -42,13 +42,13 @@ export default function ContextComponent() {
     const resetAllBears = useBearStore((state) => state.reset);
     return (
       <button
-        className="bg-slate-100 py-2 px-4"
+        className="bg-slate-100 py-2 px-5 border-4 border-red-100"
         onClick={resetAllBears}>
         reset
       </button>
     );
   }
-
+  console.table(bears)
   return (
     <div className="flex flex-col items-center py-10">
       {bearCounter()}
