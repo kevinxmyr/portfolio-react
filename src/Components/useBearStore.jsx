@@ -9,5 +9,8 @@ export const useBearStore = create((set) => ({
     })),
 
   decreasePopulation: () => set((state) => ({bears: state.bears - 1})),
-  reset: () => set((state) => ({bears: state.bears = 0}))``
+  
+  reset: () => set((state) => ({bears: state.bears = 0}))
 }));
+
+// https://www.youtube.com/watch?v=KCr-UNsM3vA
