@@ -11,8 +11,9 @@ const Home = () => {
   return (
     <div
       className='w-full h-screen flex flex-col justify-center items-center p-5
-    font-bold font-mont'>
-      <style>{`
+    font-bold font-mont lg:items-start lg:ml-10 lg:leading-10 lg:text-[1rem]'>
+      
+      <style jsx>{`
         .animationkuno {
           animation: slide 1.5s cubic-bezier(0, 1, 0.86, 0.95) 500ms forwards;
         }
@@ -55,7 +56,6 @@ const Home = () => {
             opacity: 1;
           }
         }
-       
       `}</style>
 
       <div className='text-[2.3rem] text-center mb-5'>
@@ -83,7 +83,6 @@ const Home = () => {
           </Button>
         </div>
       </Link>
-
     </div>
   );
 };

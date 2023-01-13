@@ -12,7 +12,7 @@ import ScrollToTopAlways from "./Components/ScrollToTopAlways";
 import Stacks from "./Components/Stacks";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
-import ContextComponent from "./Components/ContextComponent";
+// import ContextComponent from "./Components/ContextComponent";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
           </Route>
           <Route path='/aboutme'>
             
-            <ContextComponent />
+            {/* <ContextComponent /> */}
 
             <AboutMe />
             <Stacks />
