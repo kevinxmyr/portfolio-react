@@ -1,4 +1,4 @@
-import create  from "zustand";
+import {create}  from "zustand";
 
 // import {devtools, persist} from 'zustand'
 
@@ -14,7 +14,7 @@ export const useBearStore = create((set) => ({
 
 //   increasePopulation: () =>
 //     set((state) => ({
-//       bears: state.bears + 1,
+//       bears: state.bears + 1,    
 //     })),
 
 //   decreasePopulation: () => set((state) => ({ bears: state.bears - 1 })),

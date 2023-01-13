@@ -1,0 +1,8 @@
+.grow:active{
+   font-weight: bold;
+   transition: all 100ms ease;
+}
+
+.spanner:after {
+   content: 's'
+}
