@@ -7,7 +7,8 @@ const Home = () => {
   const bahay = "home";
   const history = useHistory();
   const [state, setState] = useState(false);
-
+  //https://www.youtube.com/watch?v=UcHkC5sJPWw&ab_channel=MariusEspejo
+  //https://blog.logrocket.com/managing-react-state-zustand/ 
   return (
     <div
       className='w-full h-screen flex flex-col justify-center items-center p-5
