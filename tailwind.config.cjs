@@ -18,6 +18,12 @@ module.exports = {
       },
       colors: {
         // PWEDE DIN DITO YUNG NASA GLOBAL SA INDEX.CSS
+      },
+      screens: {
+        iphone: '640px',
+        mini: '768px',
+        ipadpro: '1024px',
+        laptop: '1200px'
       }
     },
   },
