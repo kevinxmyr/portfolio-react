@@ -25,9 +25,7 @@ export default function ContextComponent() {
   }
 
   function add() {
-    const increasePopulation = useBearStore(
-      (state) => state.increasePopulation,
-    );
+    const increasePopulation = useBearStore((state) => state.increasePopulation);
     return (
       <button
         className='bg-slate-100 py-2 px-4 border-2 grow'

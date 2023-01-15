@@ -3,15 +3,34 @@ import Button from "../ui/Button";
 import image from "../assets/me.jpg";
 import { ParallaxHover } from "react-parallax-hover";
 import pdf from "../data/sample.pdf#toolbar=0";
+// zustand state
+import { useStateStore } from "./useStateStore";
 
 export default function AboutMe(props) {
   const about = "aboutme";
+  const screenWidth = useStateStore((state) => state.screenWidth)
+  const addScreenWidth = useStateStore((state) => state.addScreenWidth)
+
+  const parallaxSize = () => {
+    if(screenWidth >= 768) {
+      return 250
+    } else if ( screenWidth < 767) {
+      return 200
+    }
+  }
+
+    React.useEffect(() => {
+    addScreenWidth
+      // addEventListener('resize', addScreenWidth) 
+    })
 
   return (
+  
     <div
       className='background-ko text-center h-screen
       flex flex-col items-center justify-center gap-2
-      mini:h-full mini:py-20 mini: px-10 mini:grid mini:grid-cols-2 mini:justify-center mini:gap-0
+      mini:h-full mini:py-20 mini: px-10 mini:grid mini:grid-cols-2 
+      mini:justify-center mini:gap-0
       '>
       <style>{`
         .slide {
@@ -39,16 +58,16 @@ export default function AboutMe(props) {
           }
         }
       `}</style>
-
+      
       <div className='mb-6 slide mini:col-span-2 mini:mb-10'>
         <h1 className='section-title-green mini:section-mini'>about me</h1>
       </div>
-
+      
       <div className='mb-5 shadow-ko slide slide-image 
       mini:mb-0 mini:justify-self-center'>
         <ParallaxHover
-          width={220}
-          height={220}
+          width={parallaxSize()}
+          height={parallaxSize()}
           scale={3}
           borderRadius={2}
           shadow={2.5}
@@ -58,7 +77,8 @@ export default function AboutMe(props) {
       </div>
 
       <div className='p-6 slide slide-paragraph flex flex-col items-center
-        mini:justify-self-center mini:p-0 mini:items-start mini:w-[auto] mini:max-w-[20rem]'>
+        mini:justify-self-center mini:p-0 mini:items-start mini:w-[auto] 
+        mini:max-w-[20rem]'>
         <p className='text-white mini:text-start'>
           I'm an Information Technology graduate, an aspiring self-taught React
           Web Developer. Currently taking up online courses to expand my

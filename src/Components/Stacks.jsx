@@ -1,12 +1,12 @@
 import React from 'react';
-import { AiFillHtml5 } from 'react-icons/ai';
-import { DiCss3 } from 'react-icons/di';
-import { SiJavascript, SiTailwindcss, SiReact } from 'react-icons/si';
-import { FaGit } from 'react-icons/fa';
-import vscode from '../assets/vscode.png';
+// import { AiFillHtml5 } from 'react-icons/ai';
+// import { DiCss3 } from 'react-icons/di';
+// import { SiJavascript, SiTailwindcss, SiReact } from 'react-icons/si';
+// import { FaGit } from 'react-icons/fa';
+// import vscode from '../assets/vscode.png';
 import { techstacks } from '../data/techstacks';
 
-export default function Stacks() {
+export default function Stacks(props) {
   const stacks = 'stacks';
   const [dim, setDim] = React.useState(screen.width);
 
@@ -49,7 +49,7 @@ export default function Stacks() {
             <div
               key={i}
               className="flex flex-col items-center gap-3
-              mini:w-[22%] mini:max-[20rem]">
+              mini:w-[22.5%] ">
               <Icon
                 className={`${
                   techname === 'React JS' ? 'animate-spin-slow'
