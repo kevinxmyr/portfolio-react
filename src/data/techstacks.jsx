@@ -1,8 +1,11 @@
 import { AiFillHtml5 } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
-import { SiJavascript, SiTailwindcss } from 'react-icons/si';
+import { SiJavascript, SiTailwindcss, SiExpress, SiNodedotjs } from 'react-icons/si';
 import { FaGit } from 'react-icons/fa';
 import { FaGithubSquare } from 'react-icons/fa'
+import { GrReactjs } from 'react-icons/gr'
+import { SiVisualstudiocode } from 'react-icons/si'
+
 
 export const techstacks = [
    {
@@ -18,8 +21,8 @@ export const techstacks = [
       techname: 'JavaScript ES6'
    },
    {
-      Icon: SiTailwindcss,
-      techname: 'Tailwind CSS'
+      Icon: GrReactjs,
+      techname: 'React JS'
    },
    {
       Icon: FaGit,
@@ -29,4 +32,20 @@ export const techstacks = [
       Icon: FaGithubSquare,
       techname: 'Github'
    },
+   {
+      Icon: SiExpress,
+      techname: 'Express JS'
+   },
+   {
+      Icon: SiNodedotjs,
+      techname: 'Node JS'
+   },
+   {
+      Icon: SiTailwindcss,
+      techname: 'Tailwind CSS'
+   },
+   {
+      Icon: SiVisualstudiocode,
+      techname: 'Visual Studio Code'
+   }
 ]

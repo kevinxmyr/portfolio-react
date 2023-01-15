@@ -41,10 +41,11 @@ export default function AboutMe(props) {
       `}</style>
 
       <div className='mb-6 slide mini:col-span-2 mini:mb-10'>
-        <h1 className='section-title-green mini-section-title'>about me</h1>
+        <h1 className='section-title-green mini:section-mini'>about me</h1>
       </div>
 
-      <div className='mb-5 shadow-ko slide slide-image mini:mb-0 mini:justify-self-center'>
+      <div className='mb-5 shadow-ko slide slide-image 
+      mini:mb-0 mini:justify-self-center'>
         <ParallaxHover
           width={280}
           height={280}
@@ -57,14 +58,14 @@ export default function AboutMe(props) {
       </div>
 
       <div className='p-6 slide slide-paragraph flex flex-col items-center
-        mini:justify-self-center mini:p-0'>
-        <p className='text-white '>
+        mini:justify-self-center mini:p-0 mini:items-start mini:w-[auto] mini:max-w-[20rem]'>
+        <p className='text-white mini:text-start'>
           I'm an Information Technology graduate, an aspiring self-taught React
           Web Developer. Currently taking up online courses to expand my
           knowledge in Web Development.
         </p>
 
-        <p className='text-[.8rem] mt-5 text-white mb-[2rem]'>
+        <p className='text-[.9rem] mt-5 text-white mb-[2rem]'>
           I ♥️ Music, Coffee & Technology.
         </p>
 

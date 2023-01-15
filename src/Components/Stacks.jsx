@@ -1,22 +1,29 @@
-import React from "react";
-import { AiFillHtml5 } from "react-icons/ai";
-import { DiCss3 } from "react-icons/di";
-import { SiJavascript, SiTailwindcss, SiReact } from "react-icons/si";
-import { FaGit } from "react-icons/fa";
-import vscode from "../assets/vscode.png";
-import { techstacks } from "../data/techstacks";
-import StackCard from "./StackCard";
+import React from 'react';
+import { AiFillHtml5 } from 'react-icons/ai';
+import { DiCss3 } from 'react-icons/di';
+import { SiJavascript, SiTailwindcss, SiReact } from 'react-icons/si';
+import { FaGit } from 'react-icons/fa';
+import vscode from '../assets/vscode.png';
+import { techstacks } from '../data/techstacks';
 
 export default function Stacks() {
-  const stacks = "stacks";
+  const stacks = 'stacks';
   const [dim, setDim] = React.useState(screen.width);
 
-  // React.useEffect(() => {
-  //   function resizeFunction() {
-  //     setDim(screen.width)
-  //   }
-  //   window.addEventListener('resize', resizeFunction)
-  // })
+  React.useEffect(() => {
+    function resizeFunction() {
+      setDim(screen.width)
+    }
+    window.addEventListener('resize', resizeFunction)
+  })
+  
+  function sizeForIcon () {
+    if(dim >= 768){
+      return 73
+    } else {
+      return 60
+    }
+  }
 
   // function panghtml() {
   //   if(dim >= 768) {
@@ -27,14 +34,34 @@ export default function Stacks() {
   //   }
   // }
 
+  //USING MAP METHOD, PWEDE DIN YUUNG NAKA COMMENT OUT PERO MAHABA --KEVIN
   return (
-    <div className='bg-slate-100 flex flex-col items-center'>
-      <h1 className='uppercase section-title-white'>technology i use</h1>
+    <div className="bg-slate-100 flex flex-col items-center py-20">
+      <h1 className="uppercase section-title-white mb-12">technology i use</h1>
 
-      <div className="grid grid-cols-2">
-        <StackCard />
+      <div
+        className="grid grid-cols-2 gap-10
+      mini:flex mini:mini:flex-wrap mini:justify-center">
+        {techstacks.map((item, i) => {
+          const { Icon, techname } = item;
+
+          return (
+            <div
+              key={i}
+              className="flex flex-col items-center gap-3
+              mini:w-[22%] mini:max-[20rem]">
+              <Icon
+                className={`${
+                  techname === 'React JS' ? 'animate-spin-slow'
+                  : null}
+                `}
+                size={sizeForIcon()}
+              />
+              {techname}
+            </div>
+          );
+        })}
       </div>
-
     </div>
   );
 }

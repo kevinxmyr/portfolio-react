@@ -60,19 +60,19 @@ export default function Projects() {
             </div>
 
             {/* image */}
-            <div className="">
-              <ParallaxHover
+            <div className="w-[auto] ">
+              {/* <ParallaxHover
                 width={350}
                 scale={3}
                 borderRadius={2}
                 shadow={2.5}
-                rotation={2.5}>
+                rotation={2.5}> */}
                 <img
                   className="w-full h-full object-cover"
                   src={image}
                   alt="proj-image"
                 />
-              </ParallaxHover>
+              {/* </ParallaxHover> */}
             </div>
           </div>
         );
