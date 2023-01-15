@@ -12,16 +12,16 @@ export default function Stacks(props) {
 
   React.useEffect(() => {
     function resizeFunction() {
-      setDim(screen.width)
+      setDim(screen.width);
     }
-    window.addEventListener('resize', resizeFunction)
-  })
-  
-  function sizeForIcon () {
-    if(dim >= 768){
-      return 73
+    window.addEventListener('resize', resizeFunction);
+  });
+
+  function sizeForIcon() {
+    if (dim >= 768) {
+      return 73;
     } else {
-      return 60
+      return 60;
     }
   }
 
@@ -52,8 +52,8 @@ export default function Stacks(props) {
               mini:w-[22.5%] ">
               <Icon
                 className={`${
-                  techname === 'React JS' ? 'animate-spin-slow'
-                  : null}
+                  techname === 'React JS' ? 'animate-spin-slow' : null
+                }
                 `}
                 size={sizeForIcon()}
               />

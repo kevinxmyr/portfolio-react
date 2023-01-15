@@ -9,27 +9,27 @@ import { useStateStore } from "./useStateStore";
 export default function AboutMe(props) {
   const about = "aboutme";
   const screenWidth = useStateStore((state) => state.screenWidth)
-  const addScreenWidth = useStateStore((state) => state.addScreenWidth)
+  const updateScreenWidth = useStateStore((state) => state.updateScreenWidth)
 
   const parallaxSize = () => {
     if(screenWidth >= 768) {
       return 250
     } else if ( screenWidth < 767) {
-      return 200
+      return 210
     }
   }
-
-    React.useEffect(() => {
-    addScreenWidth
-      // addEventListener('resize', addScreenWidth) 
-    })
+   React.useEffect(() => {
+    window.addEventListener('load', updateScreenWidth)
+    window.addEventListener('resize', updateScreenWidth)
+    console.log(screenWidth)
+   })
 
   return (
   
     <div
       className='background-ko text-center h-screen
       flex flex-col items-center justify-center gap-2
-      mini:h-full mini:py-20 mini: px-10 mini:grid mini:grid-cols-2 
+      mini:h-full mini:py-24 mini: px-10 mini:grid mini:grid-cols-2 
       mini:justify-center mini:gap-0
       '>
       <style>{`
@@ -58,7 +58,7 @@ export default function AboutMe(props) {
           }
         }
       `}</style>
-      
+            
       <div className='mb-6 slide mini:col-span-2 mini:mb-10'>
         <h1 className='section-title-green mini:section-mini'>about me</h1>
       </div>
