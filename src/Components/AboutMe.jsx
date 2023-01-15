@@ -47,8 +47,8 @@ export default function AboutMe(props) {
       <div className='mb-5 shadow-ko slide slide-image 
       mini:mb-0 mini:justify-self-center'>
         <ParallaxHover
-          width={280}
-          height={280}
+          width={220}
+          height={220}
           scale={3}
           borderRadius={2}
           shadow={2.5}
