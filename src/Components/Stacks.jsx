@@ -40,7 +40,7 @@ export default function Stacks() {
       <h1 className="uppercase section-title-white mb-12">technology i use</h1>
 
       <div
-        className="grid grid-cols-2 gap-10
+        className="grid grid-cols-2 gap-7
       mini:flex mini:mini:flex-wrap mini:justify-center">
         {techstacks.map((item, i) => {
           const { Icon, techname } = item;
