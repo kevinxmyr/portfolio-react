@@ -10,7 +10,7 @@ export default function AboutMe(props) {
   return (
     <div
       className='background-ko text-center h-screen
-      flex flex-col items-center justify-center gap-5
+      flex flex-col items-center justify-center gap-2
       mini:h-full mini:py-20 mini: px-10 mini:grid mini:grid-cols-2 mini:justify-center mini:gap-0
       '>
       <style>{`
