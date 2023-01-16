@@ -13,7 +13,8 @@ export default function Contact() {
   return (
     <div className={`flex justify-center flex-col items-center px-10 py-20 gap-5`}>
       <div className="mt-[-1.5rem]">
-        <h1 className="section-title-white">CONTACT</h1>
+        <h1 className="section-title-white
+        laptop:text-sectionTitleLaptop">CONTACT</h1>
       </div>
 
       <div className="mt-5">

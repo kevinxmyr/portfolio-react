@@ -12,12 +12,18 @@ export default function AboutMe(props) {
   const updateScreenWidth = useStateStore((state) => state.updateScreenWidth)
 
   const parallaxSize = () => {
-    if(screenWidth >= 768) {
-      return 260
-    } else if ( screenWidth < 767) {
-      return 210
+    if(screenWidth <= 767){
+      return 210;
+    }
+    else if(screenWidth >= 768 && screenWidth <= 1199) {
+      return 260;
+    }
+    else if (screenWidth >= 1200) {
+      return 310;
     }
   }
+  
+  
    React.useEffect(() => {
     window.addEventListener('load', updateScreenWidth)
     window.addEventListener('resize', updateScreenWidth)
@@ -31,6 +37,7 @@ export default function AboutMe(props) {
       mini:h-full mini:py-24 mini: px-10 mini:grid mini:grid-cols-2 
       mini:justify-center mini:gap-0
       ${screenWidth >= 1200 ? 'background-ko-clip' : 'background-ko'}`}>
+      
       <style jsx>{`
       .background-ko-clip {
         background: rgb(0, 204, 172);
@@ -69,7 +76,7 @@ export default function AboutMe(props) {
             
       <div className='mb-6 slide mini:col-span-2 mini:mb-10'>
         <h1 className='section-title-green mini:section-mini
-        '>about me</h1>
+        laptop:text-sectionTitleLaptop'>about me</h1>
       </div>
       
       <div className='mb-5 shadow-ko slide slide-image 
@@ -86,9 +93,10 @@ export default function AboutMe(props) {
       </div>
 
       <div className='p-6 slide slide-paragraph flex flex-col items-center
-        mini:justify-self-center mini:p-0 mini:items-start mini:w-[auto] 
-        mini:max-w-[20rem]'>
-        <p className='text-white mini:text-start'>
+        mini:justify-self-center mini:p-0 mini:items-start 
+        laptop:w-[100%] laptop:mr-[2rem] laptop:max-w-[44rem]'>
+        <p className='text-white mini:text-start
+        '>
           I'm an Information Technology graduate, an aspiring self-taught React
           Web Developer. Taking up online courses to expand my
           knowledge in Web Development. 

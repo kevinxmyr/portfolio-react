@@ -11,7 +11,7 @@
   --textgray: #757575;
 }
 
-/* GLOBALS */
+/* ----------------------------GLOBALS------------------------- */
 
 * {
   margin: 0;
@@ -35,6 +35,10 @@
 }
 .section-mini {
   font-size: 20rem;
+}
+
+.section-title-laptop {
+  font-size: 1.8rem;
 }
 
 /* HOME */

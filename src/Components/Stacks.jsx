@@ -37,7 +37,8 @@ export default function Stacks(props) {
   //?USING MAP METHOD, PWEDE DIN YUNG NAKA COMMENT OUT PERO MAHABA --KEVIN
   return (
     <div className="flex flex-col items-center py-20">
-      <h1 className="uppercase section-title-white mb-12">technology i use</h1>
+      <h1 className="uppercase section-title-white mb-12
+      laptop:text-sectionTitleLaptop">technology i use</h1>
 
       <div
         className="grid grid-cols-2 gap-7

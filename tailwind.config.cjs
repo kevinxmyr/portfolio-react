@@ -6,6 +6,7 @@ module.exports = {
   content: ["./index.html",
   "./src/**/*.{js,ts,jsx,tsx}",],
   theme: {
+    
     extend: {
       fontFamily: {
         mont: ['"Montserrat"', ...defaultTheme.fontFamily.sans],
@@ -24,7 +25,12 @@ module.exports = {
         mini: '768px',
         ipadpro: '1024px',
         laptop: '1200px'
-      }
+      },
+      fontSize: {
+        sectionTitleLaptop: '2.5rem',
+        paragraphLaptop: '1.1rem',
+        projectTitleLaptop: '1.7rem'
+      },
     },
   },
   plugins: [],
