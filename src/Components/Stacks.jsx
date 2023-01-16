@@ -24,7 +24,7 @@ export default function Stacks(props) {
       return 60;
     }
   }
-
+  //! DONT REMOVE FOR MANUAL MODE
   // function panghtml() {
   //   if(dim >= 768) {
   //     return  <AiFillHtml5 size={100} />
@@ -34,14 +34,14 @@ export default function Stacks(props) {
   //   }
   // }
 
-  //USING MAP METHOD, PWEDE DIN YUUNG NAKA COMMENT OUT PERO MAHABA --KEVIN
+  //?USING MAP METHOD, PWEDE DIN YUNG NAKA COMMENT OUT PERO MAHABA --KEVIN
   return (
-    <div className="bg-slate-100 flex flex-col items-center py-20">
+    <div className="flex flex-col items-center py-20">
       <h1 className="uppercase section-title-white mb-12">technology i use</h1>
 
       <div
         className="grid grid-cols-2 gap-7
-      mini:flex mini:mini:flex-wrap mini:justify-center">
+      mini:flex mini:flex-wrap mini:justify-center">
         {techstacks.map((item, i) => {
           const { Icon, techname } = item;
 
@@ -49,7 +49,8 @@ export default function Stacks(props) {
             <div
               key={i}
               className="flex flex-col items-center gap-3
-              mini:w-[22.5%] ">
+              mini:w-[22.5%] laptop:w-[15%]
+              laptop:flex laptop:w-[20%]">
               <Icon
                 className={`${
                   techname === 'React JS' ? 'animate-spin-slow' : null

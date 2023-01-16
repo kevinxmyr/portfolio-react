@@ -14,18 +14,18 @@ const Home = () => {
       className='w-full h-screen flex flex-col justify-center items-center p-5
     font-bold font-mont lg:items-start lg:ml-10 '>
       
-      <style>{`
+      <style jsx>{`
         .animationkuno {
           animation: slide 1.5s cubic-bezier(0, 1, 0.86, 0.95) 500ms forwards;
         }
         .reveal {
-          animation: revealeffect 1.5s cubic-bezier(0, 1, 0.86, 0.95) 1500ms
+          animation: revealeffect 1s cubic-bezier(0, 1, 0.86, 0.95) 1000ms
             forwards;
         }
         .galaw {
           position: relative;
           animation: galawgaw 190ms ease-in-out forwards;
-          transition: 2s ease;
+          transition: all 2s ease;
         }
         @keyframes galawgaw {
           0% {
@@ -49,7 +49,7 @@ const Home = () => {
         }
         @keyframes revealeffect {
           from {
-            transform: translate(0px, 20px);
+            transform: translate(0px, 16px);
             opacity: 0;
           }
           to {
@@ -61,9 +61,9 @@ const Home = () => {
 
       <div className='text-[2.3rem] text-center mb-5'>
         <h1 className='animationkuno opacity-0 lg:text-[3.2rem] lg:leading-tight lg:text-start'>
-          Hi, my name is <span className='kevin-span'>Kevin</span>
+          Hi, my name is <span className='kevin-span'>Kev</span>
           <br />
-          I'm a Web Developer.
+          I'm a  React Developer.
         </h1>
       </div>
 

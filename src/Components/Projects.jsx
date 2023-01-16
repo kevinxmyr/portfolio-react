@@ -2,34 +2,20 @@ import React from 'react';
 import { projects } from '../data/projects';
 import Button from '../ui/Button';
 import { ParallaxHover } from 'react-parallax-hover';
-
+import { useStateStore } from './useStateStore'
+//https://www.youtube.com/watch?v=ZCllX1p763U&ab_channel=CoderOne
 export default function Projects() {
   const proyekto = 'projects';
+  const screenWidth = useStateStore((state) => state.screenWidth)
 
   return (
     <div
       className="bg-slate-300 p-5 flex flex-col gap-16 py-12
     background-ko">
-      {/* ----------------------MANUAL MODE------------------ */}
+
       <div className="self-center">
         <h1 className="section-title-green">Projects</h1>
       </div>
-
-      {/* <div>
-        <h2>Project Title</h2>
-      </div>
-
-      <div>
-        <p>
-          A simple ReactJS app with Search filter functionality, updates the
-          display to show filtered names. Using an API to fetch data. Check it
-          out!
-        </p>
-      </div>
-      
-      <div>
-        <button>See it Live</button>
-      </div> */}
 
       {/* ----------------------FROM OBJECT------------------ */}
       {projects.map((data) => {
@@ -61,18 +47,18 @@ export default function Projects() {
 
             {/* image */}
             <div className="w-[auto] ">
-              {/* <ParallaxHover
+              <ParallaxHover
                 width={350}
                 scale={3}
                 borderRadius={2}
                 shadow={2.5}
-                rotation={2.5}> */}
+                rotation={2.5}>
                 <img
                   className="w-full h-full object-cover"
                   src={image}
                   alt="proj-image"
                 />
-              {/* </ParallaxHover> */}
+              </ParallaxHover>
             </div>
           </div>
         );

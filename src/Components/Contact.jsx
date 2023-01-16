@@ -3,7 +3,6 @@ import Button from '../ui/Button';
 
 export default function Contact() {
   const contact = 'contact';
-  const mailchimp = 'https://mailchi.mp/65572a019bb3/landing-page-sign-up';
 
   const [display, setDisplay] = React.useState(false)
 
@@ -25,7 +24,7 @@ export default function Contact() {
 
       <div>
         <a
-          href={mailchimp}
+          href='mailto: punongbayan.kev@gmail.com'
           target="_blank">
           <Button contact={contact}>Send E-mail</Button>
         </a>

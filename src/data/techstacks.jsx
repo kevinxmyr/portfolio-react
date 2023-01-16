@@ -4,8 +4,7 @@ import { SiJavascript, SiTailwindcss, SiExpress, SiNodedotjs } from 'react-icons
 import { FaGit } from 'react-icons/fa';
 import { FaGithubSquare } from 'react-icons/fa'
 import { GrReactjs } from 'react-icons/gr'
-import { SiVisualstudiocode } from 'react-icons/si'
-
+import { SiVisualstudiocode, SiNextdotjs } from 'react-icons/si'
 
 export const techstacks = [
    {
@@ -32,14 +31,18 @@ export const techstacks = [
       Icon: FaGithubSquare,
       techname: 'Github'
    },
-   {
-      Icon: SiExpress,
-      techname: 'Express JS'
-   },
-   {
-      Icon: SiNodedotjs,
-      techname: 'Node JS'
-   },
+   // {
+   //    Icon: SiExpress,
+   //    techname: 'Express JS'
+   // },
+   // {
+   //    Icon: SiNodedotjs,
+   //    techname: 'Node JS'
+   // },
+   // {
+   //    Icon: SiNextdotjs,
+   //    techname: 'Next JS'
+   // },
    {
       Icon: SiTailwindcss,
       techname: 'Tailwind CSS'

@@ -13,7 +13,7 @@ export default function AboutMe(props) {
 
   const parallaxSize = () => {
     if(screenWidth >= 768) {
-      return 250
+      return 260
     } else if ( screenWidth < 767) {
       return 210
     }
@@ -21,18 +21,26 @@ export default function AboutMe(props) {
    React.useEffect(() => {
     window.addEventListener('load', updateScreenWidth)
     window.addEventListener('resize', updateScreenWidth)
-    console.log(screenWidth)
    })
 
   return (
   
     <div
-      className='background-ko text-center h-screen
+      className={`text-center h-screen
       flex flex-col items-center justify-center gap-2
       mini:h-full mini:py-24 mini: px-10 mini:grid mini:grid-cols-2 
       mini:justify-center mini:gap-0
-      '>
-      <style>{`
+      ${screenWidth >= 1200 ? 'background-ko-clip' : 'background-ko'}`}>
+      <style jsx>{`
+      .background-ko-clip {
+        background: rgb(0, 204, 172);
+        background: linear-gradient(
+          307deg,
+          rgba(0, 204, 172, 1) 19%,
+          rgba(2, 170, 176, 1) 78%
+        );
+        clip-path: polygon(50% 0%, 100% 0, 100% 94%, 0 100%, 25% 100%, 0 100%, 0 0);
+      }
         .slide {
           position: relative;
           animation: slideup 1s ease both;
@@ -60,7 +68,8 @@ export default function AboutMe(props) {
       `}</style>
             
       <div className='mb-6 slide mini:col-span-2 mini:mb-10'>
-        <h1 className='section-title-green mini:section-mini'>about me</h1>
+        <h1 className='section-title-green mini:section-mini
+        '>about me</h1>
       </div>
       
       <div className='mb-5 shadow-ko slide slide-image 
@@ -81,17 +90,21 @@ export default function AboutMe(props) {
         mini:max-w-[20rem]'>
         <p className='text-white mini:text-start'>
           I'm an Information Technology graduate, an aspiring self-taught React
-          Web Developer. Currently taking up online courses to expand my
-          knowledge in Web Development.
+          Web Developer. Taking up online courses to expand my
+          knowledge in Web Development. 
         </p>
 
-        <p className='text-[.9rem] mt-5 text-white mb-[2rem]'>
-          I ♥️ Music, Coffee & Technology.
-        </p>
+        <i className='text-[.9rem] mt-5 text-white mb-[2rem] text-start'>
+          P.S. <br/>I ♥️ Coffee, Music & Technology.
+        </i>
 
-        <div className='slide slide-button '>
+        <div className='slide slide-button flex gap-2'>
           <a href={pdf} target='_blank'>
-            <Button about={about}>View Resume</Button>
+            <Button about={about}>Resumé</Button>
+          </a>
+          <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-1418ec8e-b312-44db-88d8-0d180c85f07d.pdf"
+          target='_blank'>
+            <Button about={about}>Certificate</Button>
           </a>
         </div>
       </div>

@@ -4,7 +4,7 @@
 
 :root {
   --berde: #00cdac;
-  --itim: #1a1a1a;
+  --itim: #1d1d1d;
   --itim2: #342f51;
   --puti: #fefefe;
   --gray: #333333;
@@ -61,6 +61,15 @@
     rgba(0, 204, 172, 1) 19%,
     rgba(2, 170, 176, 1) 78%
   );
+}
+.background-ko-clip {
+  background: rgb(0, 204, 172);
+  background: linear-gradient(
+    307deg,
+    rgba(0, 204, 172, 1) 19%,
+    rgba(2, 170, 176, 1) 78%
+  );
+  clip-path: polygon(50% 0%, 100% 0, 100% 94%, 0 100%, 25% 100%, 0 100%, 0 0);
 }
 .shadow-ko {
   box-shadow: -1px -1px 51px -7px rgba(0, 0, 0, 0.53);
