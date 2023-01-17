@@ -9,17 +9,20 @@ export default function Projects() {
   const screenWidth = useStateStore((state) => state.screenWidth);
   const updateScreenWidth = useStateStore((state) => state.updateScreenWidth);
 
-  function projectImageSizewidth() {
+  function projectImageSizeWidth() {
     if(screenWidth >= 1200) {
-      return 700
+      return 600
     }
-    else if (screenWidth <= 1199) {
-      return 350
+    else if (screenWidth >= 391 && screenWidth <= 767) {
+      return 730
     }
   }
-  function projectImageSizeheight() {
+  function projectImageSizeHeight() {
     if(screenWidth >= 1200) {
-      return 350
+      return 500
+    }
+    else if (screenWidth >= 391 && screenWidth <= 767) {
+      return 300
     }
   }
 
@@ -73,17 +76,17 @@ export default function Projects() {
                 <a
                   href={projUrl}
                   target="_blank">
-                  <Button projects={proyekto}>See Live</Button>
+                  <Button projects={proyekto}>Live Preview</Button>
                 </a>
               </div>
             </div>
 
             {/* image */}
             <div className="laptop:ring-4 laptop:self-center
-            laptop:justify-items-center">
-              <ParallaxHover
-                width={projectImageSizewidth()}
-                height={projectImageSizeheight()}
+            laptop:justify-items-center ring-4 ring-red-200">
+              <ParallaxHover className=''
+                width={projectImageSizeWidth()}
+                height={projectImageSizeHeight()}
                 scale={3}
                 borderRadius={2}
                 shadow={2.5}
@@ -94,6 +97,9 @@ export default function Projects() {
                   alt="proj-image"
                 />
               </ParallaxHover>
+
+              {/* https://css-tricks.com/understanding-flex-grow-flex-shrink-and-flex-basis/ */}
+              {/* https://www.youtube.com/watch?v=KQ21gTWU-rM&ab_channel=NickWhite */}
             </div>
           </div>
         );

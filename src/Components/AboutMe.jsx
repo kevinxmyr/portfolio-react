@@ -23,7 +23,6 @@ export default function AboutMe(props) {
     }
   }
   
-  
    React.useEffect(() => {
     window.addEventListener('load', updateScreenWidth)
     window.addEventListener('resize', updateScreenWidth)
