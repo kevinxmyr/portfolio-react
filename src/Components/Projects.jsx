@@ -46,12 +46,16 @@ export default function Projects() {
           <div
             className="text-white flex flex-col gap-5
             laptop:flex laptop:flex-row laptop:justify-between
-            laptop:px-10"
+            laptop:px-10 mini:items-start mini:justify-start
+            mini:flex mini:flex-col laptop:gap-10 laptop:m-[0_auto]
+            laptop:max-w-[1300px]"
             key={projectTitle}>
             
             {/* FOR TITLE-DESCRIPTION-HASHTAG & BUTTON */}
-            <div className='flex flex-col gap-4 ring-4
-            laptop:w-[50%]'>
+            <div className='flex flex-col gap-4 w-full
+            laptop:w-[50%] m-[0_auto] max-w-[800px]
+            mini:self-start mini:w-full
+            '>
               {/* title */}
               <div className="">
                 <h1
@@ -62,17 +66,17 @@ export default function Projects() {
               </div>
 
               {/* description */}
-              <div className='laptop:ring-4'>
+              <div className=''>
                 <p className="">{description}</p>
               </div>
               {/* TECH */}
-              <div className='ring-4'>
+              <div className=''>
                 <code className="text-[.9rem] opacity-[.8]">
                   <i>{tech}</i>
                 </code>
               </div>
 
-              <div className="uppercase ring-4">
+              <div className="uppercase ">
                 <a
                   href={projUrl}
                   target="_blank">
@@ -82,21 +86,22 @@ export default function Projects() {
             </div>
 
             {/* image */}
-            <div className="laptop:ring-4 laptop:self-center
-            laptop:justify-items-center ring-4 ring-red-200">
-              <ParallaxHover className=''
+            <div className="laptop:  max-w-[50rem] m-[0_auto] laptop:self-center
+            laptop:justify-items-center">
+              {/* <ParallaxHover className=''
                 width={projectImageSizeWidth()}
                 height={projectImageSizeHeight()}
                 scale={3}
                 borderRadius={2}
                 shadow={2.5}
-                rotation={2.5}>
+                rotation={2.5}> */}
                 <img
-                  className="w-full h-full object-cover"
+                  className="w-screen
+                  h-full object-cover"
                   src={image}
                   alt="proj-image"
                 />
-              </ParallaxHover>
+              {/* </ParallaxHover> */}
 
               {/* https://css-tricks.com/understanding-flex-grow-flex-shrink-and-flex-basis/ */}
               {/* https://www.youtube.com/watch?v=KQ21gTWU-rM&ab_channel=NickWhite */}

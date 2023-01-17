@@ -19,7 +19,7 @@ export const projects = [
    },
    {
       projectTitle: 'Fluff Koppi Cafe',
-      description: 'Cafe single page website.',
+      description: 'Coffee Shop single responsive page modern design using React JS and Tailwind CSS, This is a real Coffee Shop Located in Laguna.',
       image: fluffimage,
       tech: '#React #TailwindCSS',
       projUrl: 'https://kapehan.vercel.app/'
