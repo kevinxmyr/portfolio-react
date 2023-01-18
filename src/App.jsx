@@ -12,6 +12,7 @@ import ScrollToTopAlways from "./Components/ScrollToTopAlways";
 import Stacks from "./Components/Stacks";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
+import Framer from "./Components/Framer";
 // import ContextComponent from "./Components/ContextComponent";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     <div className='font-mont'>
       <Router>
         <ScrollToTopAlways />
+        {/* <Framer /> */}
         <Switch>
           <Route exact path='/'>
             <Home />

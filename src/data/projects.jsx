@@ -9,7 +9,7 @@ export const projects = [
       projectTitle: 'FaceBot',
       description: 'A simple ReactJS app with Search filter functionality, updates the display to show filtered names. Using an API to fetch data. Check it out!',
       image: facebot,
-      tech: '#React',
+      tech: '#React #TachyonsCSS',
       projUrl: 'https://kevinxmyr.github.io/Facebot/'
    },
    {
@@ -21,21 +21,21 @@ export const projects = [
    },
    {
       projectTitle: 'Fluff Koppi Cafe',
-      description: 'Coffee Shop single responsive page modern design using React JS and Tailwind CSS, This is a real Coffee Shop Located in Laguna.',
+      description: 'The design of this website was created using Tailwind CSS and React Vite. The site was designed to be responsive, so it looks great on both desktop and mobile devices.',
       image: fluffimage,
       tech: '#React #TailwindCSS',
       projUrl: 'https://kapehan.vercel.app/'
    },
    {
       projectTitle: 'The Movie DB',
-      description: 'Movie and Series database fetching datas from The Movie Database API.',
+      description: 'The application fetches the latest movie and series from Movie Database API. The user can search for movies and series by title. The application also allows the user to view the ratings and release date of each movie or series.',
       image: moviedb,
       tech: '#React',
       projUrl: 'http://react-movie-search-seven.vercel.app/'
    },
    {
       projectTitle: `National Kidney Foundation (COPY)`,
-      description: 'Movie and Series database fetching datas from The Movie Database API.',
+      description: `This is a copy of the website kidney.org, which I found on the Internet. I was hoping to test my knowledge of tailwind CSS, and this is a perfect example of what I'm talking about. See live preview below.`,
       image: kidney,
       tech: '#React #TailwindCSS',
       projUrl: 'https://national-kidney-website-copy.vercel.app/#'
