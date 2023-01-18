@@ -2,6 +2,8 @@ import facebot from '../assets/projects-assets/facebot.png'
 import bggenerator from '../assets/projects-assets/bggenerator.png'
 import fluffimage from '../assets/projects-assets/fluff.png'
 import moviedb from '../assets/projects-assets/moviedb.png'
+import kidney from '../assets/projects-assets/kidney.png'
+
 export const projects = [
    {
       projectTitle: 'FaceBot',
@@ -30,6 +32,13 @@ export const projects = [
       image: moviedb,
       tech: '#React',
       projUrl: 'http://react-movie-search-seven.vercel.app/'
+   },
+   {
+      projectTitle: `National Kidney Foundation (COPY)`,
+      description: 'Movie and Series database fetching datas from The Movie Database API.',
+      image: kidney,
+      tech: '#React #TailwindCSS',
+      projUrl: 'https://national-kidney-website-copy.vercel.app/#'
    }
    
 ]

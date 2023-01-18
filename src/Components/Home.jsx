@@ -11,8 +11,8 @@ const Home = () => {
   //https://blog.logrocket.com/managing-react-state-zustand/ 
   return (
     <div
-      className='w-full h-screen flex flex-col justify-center items-center p-5
-    font-bold font-mont lg:items-start lg:ml-10 '>
+      className='font-bold font-mont w-full h-screen flex flex-col justify-center items-center p-5
+     lg:items-start '>
       
       <style jsx>{`
         .animationkuno {
@@ -59,7 +59,8 @@ const Home = () => {
         }
       `}</style>
 
-      <div className='text-[2.3rem] text-center mb-5'>
+      <div className='text-[2.3rem] text-center mb-5
+      ipadpro:ml-10 laptop:ml-10'>
         <h1 className='animationkuno opacity-0 lg:text-[3.2rem] lg:leading-tight lg:text-start'>
           Hi, my name is <span className='kevin-span'>Kev</span>
           <br />
@@ -67,7 +68,8 @@ const Home = () => {
         </h1>
       </div>
 
-      <Link className='reveal opacity-0' to='/aboutme'>
+      <Link className='reveal opacity-0 ipadpro:ml-10 laptop:ml-10' 
+      to='/aboutme'>
         <div
           onMouseEnter={() => setState(true)}
           onMouseLeave={() => setState(false)}
