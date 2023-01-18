@@ -2,7 +2,7 @@ import facebot from '../assets/projects-assets/facebot.png'
 import bggenerator from '../assets/projects-assets/bggenerator.png'
 import fluffimage from '../assets/projects-assets/fluff.png'
 import moviedb from '../assets/projects-assets/moviedb.png'
-import kidney from '../assets/projects-assets/kidney.JPG'
+import kidney from '../assets/projects-assets/kidney.jpeg'
 
 export const projects = [
    {
