@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div
       className='font-bold font-mont w-full h-screen flex flex-col justify-center items-center p-5
-     lg:items-start '>
+      lg:items-start '>
       
       <style jsx>{`
         .animationkuno {
@@ -59,8 +59,7 @@ const Home = () => {
         }
       `}</style>
 
-      <div className='text-[2.3rem] text-center mb-5
-      ipadpro:ml-10 laptop:ml-10'>
+      <div className='text-[2.3rem] text-center mb-5 ipadpro:ml-10 laptop:ml-10'>
         <h1 className='animationkuno opacity-0 lg:text-[3.2rem] lg:leading-tight lg:text-start'>
           Hi, my name is <span className='kevin-span'>Kev</span>
           <br />
