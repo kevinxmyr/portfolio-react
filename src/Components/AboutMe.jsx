@@ -37,7 +37,7 @@ export default function AboutMe(props) {
       mini:justify-center mini:gap-0
       ${screenWidth >= 1200 ? 'background-ko-clip' : 'background-ko'}`}>
       
-      <style jsx>{`
+      <style>{`
       .background-ko-clip {
         background: rgb(0, 204, 172);
         background: linear-gradient(

@@ -20,7 +20,7 @@ function App() {
     <div className='font-mont'>
       <Router>
         <ScrollToTopAlways />
-        {/* <Framer /> */}
+        <Framer />
         <Switch>
           <Route exact path='/'>
             <Home />
