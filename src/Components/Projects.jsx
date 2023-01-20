@@ -7,7 +7,6 @@ import { motion } from 'framer-motion'
 
 //https://www.youtube.com/watch?v=ZCllX1p763U&ab_channel=CoderOne
 
-
 export default function Projects() {
   const proyekto = "projects";
   const screenWidth = useStateStore((state) => state.screenWidth);

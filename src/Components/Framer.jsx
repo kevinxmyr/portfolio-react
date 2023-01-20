@@ -1,42 +1,56 @@
-import React, { useRef, useState, useEffect } from "react";
-import { useInView } from "framer-motion";
+import React from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 function Framer() {
-  const Parent = ({ children }) => {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: false });
-    console.log("FROM CLG:", isInView);
-
-    useEffect(() => {
-      console.log("Element is in view", isInView);
-    }, [isInView]);
-
-    return (
-      <div
-        className='h-[110vh] w-full font-bold text-[5rem] flex
-      justify-center bg-red-200 border-red-500 border-2 text-white'
-        ref={ref}>
-        <span style={{
-          transform: isInView ? "none" : "translateX(-200px)",
-          opacity: isInView ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s"
-        }}>{children}</span>
-      </div>
-    );
-  };
-
   return (
-    <>
-      <Parent>Shanaya</Parent>
-      <Parent>Arkin</Parent>
-      <Parent>Punongbayan</Parent>
-      <Parent>Four</Parent>
-      <Parent>Five</Parent>
-    </>
-  );
+    <div>Framer</div>
+  )
 }
 
-export default Framer;
+export default Framer
+
+
+
+// !IN VIEW WITH CHILDREN
+// import React, { useRef, useState, useEffect } from "react";
+// import { useInView } from "framer-motion";
+
+// function Framer() {
+//   const Parent = ({ children }) => {
+//     const ref = useRef(null);
+//     const isInView = useInView(ref, { once: false });
+//     console.log("FROM CLG:", isInView);
+
+//     useEffect(() => {
+//       console.log("Element is in view", isInView);
+//     }, [isInView]);
+
+//     return (
+//       <div
+//         className='h-[110vh] w-full font-bold text-[5rem] flex
+//       justify-center bg-red-200 border-red-500 border-2 text-white'
+//         ref={ref}>
+//         <span style={{
+//           transform: isInView ? "none" : "translateX(-200px)",
+//           opacity: isInView ? 1 : 0,
+//           transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s"
+//         }}>{children}</span>
+//       </div>
+//     );
+//   };
+
+//   return (
+//     <>
+//       <Parent>Shanaya</Parent>
+//       <Parent>Arkin</Parent>
+//       <Parent>Punongbayan</Parent>
+//       <Parent>Four</Parent>
+//       <Parent>Five</Parent>
+//     </>
+//   );
+// }
+
+// export default Framer;
 
 // import React from "react";
 // import { motion } from "framer-motion";
