@@ -13,8 +13,8 @@ function Framer() {
 
     return (
       <div
-        className='h-[20rem] w-full font-bold text-[5rem] flex
-      justify-center items-center bg-slate-300 border-red-500 border-2'
+        className='h-[110vh] w-full font-bold text-[5rem] flex
+      justify-center bg-red-200 border-red-500 border-2 text-white'
         ref={ref}>
         <span style={{
           transform: isInView ? "none" : "translateX(-200px)",
@@ -27,11 +27,11 @@ function Framer() {
 
   return (
     <>
-      <Parent>Hello Im Juan</Parent>
-      <Parent>Hello Im Dos</Parent>
-      <Parent>Hello Im Tres</Parent>
-      <Parent>Hello Im Por</Parent>
-      <Parent>Hello Im Singko</Parent>
+      <Parent>Shanaya</Parent>
+      <Parent>Arkin</Parent>
+      <Parent>Punongbayan</Parent>
+      <Parent>Four</Parent>
+      <Parent>Five</Parent>
     </>
   );
 }
