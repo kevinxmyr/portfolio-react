@@ -1,9 +1,19 @@
 import React from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 function Framer() {
+  const [move, setMove] = React.useState(false)
+
   return (
-    <div>Framer</div>
+    <div className='bg-cyan-300 w-screen h-screen flex justify-center items-center'>
+      <motion.div className={`bg-red-500 w-[25rem] h-[25rem] rounded-[50%]
+      ${move == false ? 'bg-red-900' : 'bg-red-100'}`}
+      initial={{scale: 0}}
+      transition={{delay: 0}}
+      animate={{x: move ? -200 : 200, scale: 1}} onClick={() => setMove(!move)}>
+      hello
+      </motion.div>
+    </div>
   )
 }
 
