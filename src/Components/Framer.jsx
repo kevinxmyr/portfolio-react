@@ -2,11 +2,38 @@ import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 function Framer() {
+  const [state, setState] = React.useState(false)
   return (
-    <div>Framer</div>
+    <div className={`bg-gradient-to-r from-indigo-200 via-red-200 to-cyan-200 h-screen
+    flex justify-center items-center`}>
+      <motion.div layout className={`h-[5.2rem] w-[10rem] bg-white/50 rounded-full
+     flex ${state ? 'justify-end bg-green-300' : 'justify-start'} hover:cursor-pointer`} 
+      onClick={() => setState(!state)}>
+        <motion.div transition={spring} layout className='rounded-full w-[4.2rem] h-[4.2rem] 
+        ml-[10px] mt-[7.2px] mr-3 bg-white flex justify-center items-center'>
+          {
+            state ? <p className='font-bold text-[1.2rem] text-[#86EFAC]'>On</p> : 
+            <p className='font-bold text-[#1a1a1a] text-[1.2rem]'>Off</p>
+          }
+        </motion.div>
+      </motion.div>
+
+      <motion.div>
+        <motion.div layout
+         className='w-[6rem] h-[6rem] bg-white rounded-full flex justify-center items-center'>
+          <div className='rounded-full w-[2rem] h-[2rem] bg-[pink]'></div>
+        </motion.div>
+      </motion.div>
+
+    </div>
   )
 }
-
+const spring = {
+  type: 'spring',
+  stiffness: 500,
+  damping: 50,
+  duration: .50
+}
 export default Framer
 
 

@@ -25,31 +25,11 @@ export default function Projects() {
       return 300;
     }
   }
-
-  function style () {
-    return (`
-      .test {
-        animation: anim 3s 1s infinite;
-        color: black;
-      }
-      @keyframes anim {
-        from {
-          opacity: 0;
-          color: red;
-        } to {
-          opacity: 1;
-          color: blue;
-        }
-      }
-    `)}
     
   return (
     <div
       className="bg-slate-300 p-5 flex flex-col gap-16 py-20
-    background-ko"
-    >
-      <style>{style()}</style>
-
+    background-ko">
       <div className="self-center">
         <h1 className="section-title-green laptop:text-sectionTitleLaptop test">
           Projects
