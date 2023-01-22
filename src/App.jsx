@@ -37,7 +37,7 @@ function App() {
           </Route>
           
         </Switch>
-        {/* <Redirect to='/' /> REMOVED TO PREVENT REFRESH FROM REDIRECTIING TO HOME PAGE */}
+         <Redirect to='/' /> {/* REMOVED TO PREVENT REFRESH FROM REDIRECTIING TO HOME PAGE */}
         <Footer />
       </Router>
     </div>
