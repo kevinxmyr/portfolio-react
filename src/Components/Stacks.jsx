@@ -5,10 +5,23 @@ import React from 'react';
 // import { FaGit } from 'react-icons/fa';
 // import vscode from '../assets/vscode.png';
 import { techstacks } from '../data/techstacks';
+import { useInView, motion } from "framer-motion";
+
 
 export default function Stacks(props) {
-  const stacks = 'stacks';
+  // const stacks = 'stacks';
   const [dim, setDim] = React.useState(screen.width);
+  const [inView, setInView] = React.useState(null);
+  
+  const ref = React.useRef(null);
+  const isInView =  useInView(ref, { once: false });
+  
+  console.log("FROM CLG:", isInView, 'STATE::', inView);
+  
+  React.useEffect(() => {
+    setInView(isInView)
+    console.log("Element is in view", isInView);
+  }, [isInView]);
 
   React.useEffect(() => {
     function resizeFunction() {
@@ -35,6 +48,7 @@ export default function Stacks(props) {
   // }
 
   //?USING MAP METHOD, PWEDE DIN YUNG NAKA COMMENT OUT PERO MAHABA --KEVIN
+  
   return (
     <div className="flex flex-col items-center py-20">
       <h1 className="uppercase section-title-white mb-12
@@ -47,7 +61,7 @@ export default function Stacks(props) {
           const { Icon, techname } = item;
 
           return (
-            <div
+            <div ref={ref}
               key={i}
               className="flex flex-col items-center gap-3
               mini:w-[22.5%] laptop:w-[15%]

@@ -13,6 +13,7 @@ import Stacks from "./Components/Stacks";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Framer from "./Components/Framer";
+
 // import ContextComponent from "./Components/ContextComponent";
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
     <div className='font-mont'>
       <Router>
         <ScrollToTopAlways />
-        {/* <Framer /> */}
+        <Framer />
         <Switch>
           <Route exact path='/'>
             <Home />
@@ -37,7 +38,7 @@ function App() {
           </Route>
           
         </Switch>
-         <Redirect exact to='/' /> {/* REMOVED TO PREVENT REFRESH FROM REDIRECTIING TO HOME PAGE */}
+        {/*<Redirect exact to='/' />  REMOVED TO PREVENT REFRESH FROM REDIRECTIING TO HOME PAGE */}
         <Footer />
       </Router>
     </div>
