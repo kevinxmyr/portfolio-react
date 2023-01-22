@@ -37,7 +37,7 @@ function App() {
           </Route>
           
         </Switch>
-         <Redirect to='/aboutme' /> {/* REMOVED TO PREVENT REFRESH FROM REDIRECTIING TO HOME PAGE */}
+         <Redirect exact to='/' /> {/* REMOVED TO PREVENT REFRESH FROM REDIRECTIING TO HOME PAGE */}
         <Footer />
       </Router>
     </div>
