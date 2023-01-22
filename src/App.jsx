@@ -20,8 +20,8 @@ function App() {
   return (
     <div className='font-mont'>
       <Router>
-        <ScrollToTopAlways />
-        <Framer />
+        {/* <ScrollToTopAlways /> */}
+        {/* <Framer /> */}
         <Switch>
           <Route exact path='/'>
             <Home />

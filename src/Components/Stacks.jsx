@@ -11,15 +11,14 @@ import { useInView, motion } from "framer-motion";
 export default function Stacks(props) {
   // const stacks = 'stacks';
   const [dim, setDim] = React.useState(screen.width);
-  const [inView, setInView] = React.useState(null);
+  const [inViewState, setInViewState] = React.useState(false);
   
   const ref = React.useRef(null);
   const isInView =  useInView(ref, { once: false });
   
-  console.log("FROM CLG:", isInView, 'STATE::', inView);
+  console.log("FROM CLG:", isInView);
   
   React.useEffect(() => {
-    setInView(isInView)
     console.log("Element is in view", isInView);
   }, [isInView]);
 
@@ -37,6 +36,26 @@ export default function Stacks(props) {
       return 60;
     }
   }
+  
+  const container = {
+    hidden: { opacity: isInView ? 1 : undefined, scale: isInView ? 0 : undefined},
+    visible: {
+      opacity: isInView ? 1 : undefined,
+      scale: isInView ? 1 : null,
+      transition: {
+        delayChildren: isInView ? 0.3 : null,
+        staggerChildren: isInView ? 0.3 : null,
+      },
+    },
+  };
+  
+  const item2 = {
+    hidden: { y: 20, opacity: isInView ? 0 : undefined },
+    visible: {
+      y: isInView ? 0 : undefined,
+      opacity: isInView ? 1 : 0,
+    },
+  };
   //! DONT REMOVE FOR MANUAL MODE
   // function panghtml() {
   //   if(dim >= 768) {
@@ -51,17 +70,18 @@ export default function Stacks(props) {
   
   return (
     <div className="flex flex-col items-center py-20">
-      <h1 className="uppercase section-title-white mb-12
-      laptop:text-sectionTitleLaptop">technology i use</h1>
+    
+      <motion.h1 initial={{opacity: 0}} animate={{y: isInView ? "-16px" : null, opacity: 1}} className="uppercase section-title-white mb-12
+      laptop:text-sectionTitleLaptop">technology i use</motion.h1>
 
-      <div
-        className="grid grid-cols-2 gap-7
-      mini:flex mini:flex-wrap mini:justify-center">
+      <motion.ul variants={container} initial={"hidden"} animate={"visible"}
+        className="grid grid-cols-2 gap-7 mini:flex mini:flex-wrap mini:justify-center">
+      
         {techstacks.map((item, i) => {
           const { Icon, techname } = item;
 
           return (
-            <div ref={ref}
+            <motion.li ref={ref} variants={item2}
               key={i}
               className="flex flex-col items-center gap-3
               mini:w-[22.5%] laptop:w-[15%]
@@ -74,10 +94,10 @@ export default function Stacks(props) {
                 size={sizeForIcon()}
               />
               {techname}
-            </div>
+            </motion.li>
           );
         })}
-      </div>
+      </motion.ul>
     </div>
   );
 }

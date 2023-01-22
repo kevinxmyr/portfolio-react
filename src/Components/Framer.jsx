@@ -21,10 +21,13 @@ const item = {
   },
 };
 
+const arr = [1,2,3,4] 
+console.log(arr.length)
+
 export default function Framer() {
   return (
     <div className="bg-slate-400 flex flex-col items-center">
-      <style jsx>{`
+      <style>{`
         .container1 {
           width: 150px;
           height: 150px;
@@ -42,7 +45,7 @@ export default function Framer() {
 
         .item1 {
           background: white;
-          border-radius: 100%;
+          border-radius: 8%;
         }
       `}</style>
       <motion.ul
@@ -51,7 +54,7 @@ export default function Framer() {
         initial="hidden"
         animate="visible"
       >
-        {[0, 1, 2, 3].map((index) => (
+        {arr.map((index) => (
         
           <motion.li
             key={index}
