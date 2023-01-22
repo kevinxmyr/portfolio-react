@@ -6,7 +6,7 @@ import { FiArrowRight } from "react-icons/fi";
 
 const Home = () => {
   const bahay = "home";
-  const history = useHistory();
+  const history = React.useHistory();
   const [state, setState] = useState(false);
   //https://www.youtube.com/watch?v=UcHkC5sJPWw&ab_channel=MariusEspejo
   //https://blog.logrocket.com/managing-react-state-zustand/
