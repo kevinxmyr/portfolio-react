@@ -74,7 +74,7 @@ const Home = () => {
         <div onClick={() => history.push('/aboutme')}
           onMouseEnter={() => setState(true)}
           onMouseLeave={() => setState(false)}
-          className='reveal opacity-0'>
+          className='reveal opacity-0 ipadpro:ml-10 laptop:ml-10'>
           <Button bahay={bahay}>
             Learn More
             {state && (
