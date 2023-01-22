@@ -24,7 +24,7 @@ function Framer() {
           <div className='rounded-full w-[2rem] h-[2rem] bg-[pink]'></div>
         </motion.div>
       </motion.div>
-
+      <button class="btn btn-secondary hover:btn-accent-focus">Button</button>
     </div>
   )
 }

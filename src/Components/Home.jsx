@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div
       className='font-bold font-mont w-full h-screen flex flex-col justify-center items-center p-5
-      lg:items-start '>
+      lg:items-start'>
       
       <style jsx>{`
         .animationkuno {

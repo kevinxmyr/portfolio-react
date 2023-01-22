@@ -21,7 +21,7 @@ module.exports = {
         // PWEDE DIN DITO YUNG NASA GLOBAL SA INDEX.CSS
       },
       screens: {
-        iphone: '640px',
+        iphone: '390px',
         mini: '768px',
         ipadpro: '1024px',
         laptop: '1200px'
@@ -33,5 +33,10 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  
+  daisyui : {
+    darkTheme: "dark",
+    themes: false,
+  }
 }
