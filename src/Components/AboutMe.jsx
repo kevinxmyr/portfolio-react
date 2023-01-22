@@ -5,9 +5,12 @@ import { ParallaxHover } from "react-parallax-hover";
 import pdf from "../data/sample.pdf#toolbar=0";
 // zustand state
 import { useStateStore } from "./useStateStore";
+import { RiArrowLeftSLine } from 'react-icons/ri'
+import { useHistory } from "react-router-dom";
 
 export default function AboutMe(props) {
   const about = "aboutme";
+  const history = useHistory();
   const screenWidth = useStateStore((state) => state.screenWidth);
   const updateScreenWidth = useStateStore((state) => state.updateScreenWidth);
 
@@ -35,6 +38,13 @@ export default function AboutMe(props) {
       ${screenWidth >= 1200 ? "background-ko-clip" : "background-ko"}
       `}
     >
+    
+    <div className="absolute top-8 left-5 flex cursor-pointer
+    hover:underline hover:decoration-white" onClick={() => history.push('/')}>
+      <RiArrowLeftSLine size={40} color="white"/>
+      <p className="top-10 text-white ml-[-6px] self-center">Back</p>
+    </div>
+    
       <style>{`
       .background-ko-clip {
         background: rgb(0, 204, 172);

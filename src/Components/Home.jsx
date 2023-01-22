@@ -1,20 +1,22 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useCallback } from "react";
 import { Link, Redirect, useHistory } from "react-router-dom";
 import Button from "../ui/Button";
 import { FiArrowRight } from "react-icons/fi";
+
 
 const Home = () => {
   const bahay = "home";
   const history = useHistory();
   const [state, setState] = useState(false);
   //https://www.youtube.com/watch?v=UcHkC5sJPWw&ab_channel=MariusEspejo
-  //https://blog.logrocket.com/managing-react-state-zustand/ 
+  //https://blog.logrocket.com/managing-react-state-zustand/
+
   return (
     <div
       className='font-bold font-mont w-full h-screen flex flex-col justify-center items-center p-5
       lg:items-start'>
       
-      <style jsx>{`
+      <style>{`
         .animationkuno {
           animation: slide 1.5s cubic-bezier(0, 1, 0.86, 0.95) 500ms forwards;
         }
@@ -67,9 +69,9 @@ const Home = () => {
         </h1>
       </div>
 
-      <Link className='reveal opacity-0 ipadpro:ml-10 laptop:ml-10' 
-      to='/aboutme'>
-        <div
+      {/* <Link className='reveal opacity-0 ipadpro:ml-10 laptop:ml-10' 
+      to='/aboutme'> */}
+        <div onClick={() => history.push('/aboutme')}
           onMouseEnter={() => setState(true)}
           onMouseLeave={() => setState(false)}
           className='reveal opacity-0'>
@@ -84,7 +86,7 @@ const Home = () => {
             )}
           </Button>
         </div>
-      </Link>
+      {/* </Link> */}
     </div>
   );
 };
