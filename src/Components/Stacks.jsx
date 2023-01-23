@@ -38,7 +38,7 @@ export default function Stacks(props) {
   }
   
   const container = {
-    hidden: { opacity: isInView ? 1 : undefined, scale: isInView ? 0 : undefined},
+    hidden: { opacity: 0, scale: 0},
     visible: {
       opacity: isInView ? 1 : undefined,
       scale: isInView ? 1 : null,
@@ -48,7 +48,7 @@ export default function Stacks(props) {
       },
     },
   };
-  
+   
   const item2 = {
     hidden: { y: 20, opacity: isInView ? 0 : undefined },
     visible: {
@@ -71,7 +71,8 @@ export default function Stacks(props) {
   return (
     <div className="flex flex-col items-center py-20">
     
-      <motion.h1 initial={{opacity: 0}} animate={{y: isInView ? "-16px" : null, opacity: 1}} className="uppercase section-title-white mb-12
+      <motion.h1 initial={{opacity: 0}} animate={{y: isInView ? "-.5rem" : null, opacity: 1}} 
+      className="uppercase section-title-white mb-12
       laptop:text-sectionTitleLaptop">technology i use</motion.h1>
 
       <motion.ul variants={container} initial={"hidden"} animate={"visible"}
@@ -84,8 +85,7 @@ export default function Stacks(props) {
             <motion.li ref={ref} variants={item2}
               key={i}
               className="flex flex-col items-center gap-3
-              mini:w-[22.5%] laptop:w-[15%]
-              laptop:flex laptop:w-[20%]">
+              mini:w-[22.5%] laptop:w-[20%] laptop:flex ">
               <Icon
                 className={`${
                   techname === 'React JS' ? 'animate-spin-slow' : null
