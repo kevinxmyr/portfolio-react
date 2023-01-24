@@ -11,16 +11,9 @@ import { useInView, motion } from "framer-motion";
 export default function Stacks(props) {
   // const stacks = 'stacks';
   const [dim, setDim] = React.useState(screen.width);
-  const [inViewState, setInViewState] = React.useState(false);
   
   const ref = React.useRef(null);
-  const isInView =  useInView(ref, { once: false });
-  
-  console.log("FROM CLG:", isInView);
-  
-  React.useEffect(() => {
-    console.log("Element is in view", isInView);
-  }, [isInView]);
+  const isInView =  useInView(ref, { once: true }); //set this to false when in view to play animation over again
 
   React.useEffect(() => {
     function resizeFunction() {
@@ -38,21 +31,21 @@ export default function Stacks(props) {
   }
   
   const container = {
-    hidden: { opacity: 0, scale: 0},
+    // hidden: { opacity: 0, scale: 0},
     visible: {
-      opacity: isInView ? 1 : undefined,
-      scale: isInView ? 1 : null,
-      transition: {
-        delayChildren: isInView ? 0.3 : null,
-        staggerChildren: isInView ? 0.3 : null,
+      opacity: isInView ? 1 : 0,
+      scale: isInView ? 1 : 1,
+    transition: {
+        delayChildren: isInView ? 0.750 : 0,
+        staggerChildren: isInView ? 0.25 : 0,
       },
     },
   };
-   
+
   const item2 = {
-    hidden: { y: 20, opacity: isInView ? 0 : undefined },
+    // hidden: { y: 20, opacity: 0 },
     visible: {
-      y: isInView ? 0 : undefined,
+      y: isInView ? 0 : 20,
       opacity: isInView ? 1 : 0,
     },
   };
@@ -66,23 +59,23 @@ export default function Stacks(props) {
   //   }
   // }
 
-  //?USING MAP METHOD, PWEDE DIN YUNG NAKA COMMENT OUT PERO MAHABA --KEVIN
+  //?USING MAP METHOD, PWEDE DIN YUNG NAKA COMMENT OUT PERO MAHABA.
   
   return (
     <div className="flex flex-col items-center py-20">
     
-      <motion.h1 initial={{opacity: 0}} animate={{y: isInView ? "-.5rem" : null, opacity: 1}} 
+      <motion.h1  ref={ref} initial={{opacity: 0}} animate={{y: isInView ? "-.6rem" : 0, opacity: isInView ? 1 : 0}} transition={{duration: .500, ease: "easeOut"}}
       className="uppercase section-title-white mb-12
       laptop:text-sectionTitleLaptop">technology i use</motion.h1>
 
-      <motion.ul variants={container} initial={"hidden"} animate={"visible"}
+      <motion.ul variants={container} initial={"hidden"} animate={"visible"} 
         className="grid grid-cols-2 gap-7 mini:flex mini:flex-wrap mini:justify-center">
       
         {techstacks.map((item, i) => {
           const { Icon, techname } = item;
 
           return (
-            <motion.li ref={ref} variants={item2}
+            <motion.li variants={item2}
               key={i}
               className="flex flex-col items-center gap-3
               mini:w-[22.5%] laptop:w-[20%] laptop:flex ">

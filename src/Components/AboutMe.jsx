@@ -38,7 +38,7 @@ export default function AboutMe(props) {
       ${screenWidth >= 1200 ? "background-ko-clip" : "background-ko"}
       `}
     >
-    
+    {/* BACK ARROW */}
     <div className="absolute top-8 left-5 flex cursor-pointer
     hover:underline hover:decoration-white" onClick={() => history.push('/')}>
       <RiArrowLeftSLine size={40} color="white"/>
@@ -116,7 +116,7 @@ export default function AboutMe(props) {
         laptop:ml-10"
       >
         <p
-          className="text-white mini:text-start
+          className="text-white mini:text-start max-w-[19rem] text-center
         "
         >
           I'm an Information Technology graduate, an aspiring self-taught React
@@ -124,7 +124,7 @@ export default function AboutMe(props) {
           Development.
         </p>
 
-        <i className="text-[.9rem] mt-5 text-white mb-[2rem] text-start">
+        <i className={`text-[.9rem] mt-5 text-white mb-[2rem] text-start ${screenWidth <= 391 ? 'hidden' : 'visible'}`} >
           P.S. <br />I ♥️ Coffee, Music & Technology.
         </i>
 

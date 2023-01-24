@@ -5,6 +5,7 @@ import { FaGit } from 'react-icons/fa';
 import { FaGithubSquare } from 'react-icons/fa'
 import { GrReactjs } from 'react-icons/gr'
 import { SiVisualstudiocode, SiNextdotjs } from 'react-icons/si'
+import { CgFramer } from 'react-icons/cg'
 
 export const techstacks = [
    {
@@ -46,6 +47,10 @@ export const techstacks = [
    {
       Icon: SiTailwindcss,
       techname: 'Tailwind CSS'
+   },
+   {
+      Icon : CgFramer,
+      techname: 'Framer Motion'
    },
    {
       Icon: SiVisualstudiocode,
