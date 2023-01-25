@@ -33,13 +33,13 @@ export default function AboutMe(props) {
     <div
       className={`text-center h-screen
       flex flex-col items-center justify-center gap-2
-      mini:h-full mini:py-24 mini: px-10 mini:grid mini:grid-cols-2 
-      mini:justify-center mini:gap-0 laptop:gap-1
+      mini:h-full mini:py-24 mini:px-10 mini:grid mini:grid-cols-2 mini:grid-rows-[auto_minmax(100px,_1fr)]
+      mini:justify-center mini:gap-0 laptop:h-screen
       ${screenWidth >= 1200 ? "background-ko-clip" : "background-ko"}
       `}
     >
     {/* BACK ARROW */}
-    <div className="absolute top-8 left-5 flex cursor-pointer
+    <div className="absolute top-5 left-5 flex cursor-pointer
     hover:underline hover:decoration-white" onClick={() => history.push('/')}>
       <RiArrowLeftSLine size={40} color="white"/>
       <p className="top-10 text-white ml-[-6px] self-center">Back</p>
@@ -81,13 +81,9 @@ export default function AboutMe(props) {
         }
       `}</style>
 
-      <div className="mb-6 slide mini:col-span-2 mini:mb-10">
-        <h1
-          className="section-title-green mini:section-mini
-        laptop:text-sectionTitleLaptop"
-        >
-          about me
-        </h1>
+      <div className="mb-6 slide mini:col-span-2 mini:mb-10 mini:place-self-center laptop:mb-0">
+        <h1 className="section-title-green mini:section-mini
+        laptop:text-sectionTitleLaptop">about me</h1>
       </div>
       
       <div className="mb-5 shadow-ko slide slide-image 
@@ -113,18 +109,14 @@ export default function AboutMe(props) {
         className="p-6 slide slide-paragraph flex flex-col items-center
         mini:justify-self-center mini:p-0 mini:items-start max-w-[450px]
         laptop:w-[100%] laptop:mr-[2rem] laptop:max-w-[30rem] laptop:justify-self-start
-        laptop:ml-10"
-      >
-        <p
-          className="text-white mini:text-start max-w-[19rem] text-center
-        "
-        >
+        laptop:ml-10">
+        <p className="text-white mini:text-start max-w-[19rem] text-center">
           I'm an Information Technology graduate, an aspiring self-taught React
           Web Developer. Taking up online courses to expand my knowledge in Web
           Development.
         </p>
 
-        <i className={`text-[.9rem] mt-5 text-white mb-[2rem] text-start ${screenWidth <= 391 ? 'hidden' : 'visible'}`} >
+        <i className={`text-[.9rem] mt-5 text-white mb-[2rem] text-start`} >
           P.S. <br />I ♥️ Coffee, Music & Technology.
         </i>
 
