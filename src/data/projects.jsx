@@ -24,7 +24,7 @@ export const projects = [
       description: 'The design of this website was created using Tailwind CSS and React Vite. The site was designed to be responsive, so it looks great on both desktop and mobile devices.',
       image: fluffimage,
       tech: '#React #TailwindCSS',
-      projUrl: 'https://kapehan.vercel.app/'
+      projUrl: 'https://fluffkoppi.vercel.app/'
    },
    {
       projectTitle: 'The Movie DB',
