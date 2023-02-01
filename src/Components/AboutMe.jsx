@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../ui/Button";
 import image from "../assets/me.jpg";
 import { ParallaxHover } from "react-parallax-hover";
-import pdf from "../data/sample.pdf#toolbar=0";
+import pdf from "../data/resume.pdf#toolbar=0";
 // zustand state
 import { useStateStore } from "./useStateStore";
 import { RiArrowLeftSLine } from 'react-icons/ri'
